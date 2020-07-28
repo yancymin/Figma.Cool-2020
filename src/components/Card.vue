@@ -1,17 +1,17 @@
 <template>
-  <div class="card" :style="bgColor">
-    <img :src="imgSrc" alt="" srcset="" class="logo" />
+  <a class="card" :style="bgColor" :href="href" target="_blank">
+    <img :src="imgSrc" :alt="imgSrc"  class="logo" />
     <h3 class="title">{{ title }}</h3>
     <p class="info">{{ info }}</p>
     <p class="des">{{ des }}</p>
-    <img :src="rightSrc" alt="" srcset="" class="right">
-  </div>
+    <img :src="rightSrc" :alt="rightSrc" class="right">
+  </a>
 </template>
 
 <script>
 export default {
   name: "card",
-  props: ["imgSrc", "title", "info", "des", "bgColor", "rightSrc"]
+  props: ["imgSrc", "title", "info", "des", "bgColor", "rightSrc", "href"]
 }
 </script>
 

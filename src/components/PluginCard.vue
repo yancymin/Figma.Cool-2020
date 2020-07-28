@@ -1,12 +1,12 @@
 <template>
-  <a class="card" :style="bgColor" :href="href" target="_blank">
+  <a class="card" :href="href" target="_blank">
     <div class="left">
-      <img :src="imgSrc" alt="" srcset="" class="logo" />
+      <img :src="imgSrc" :alt="imgSrc" class="logo" />
       <h3 class="title">{{ title }}</h3>
       <p class="info">{{ info }}</p>
       <p class="des">{{ des }}</p>
     </div>
-    <img :src="rightSrc" alt="" srcset="" class="right" />
+    <img :src="rightSrc" :alt="rightSrc" class="right" />
   </a>
 </template>
 

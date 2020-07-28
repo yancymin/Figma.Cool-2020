@@ -165,6 +165,7 @@
           imgSrc="/imgs/card-logo-1.svg"
           bgColor="background: var(--color-red-1)"
           rightSrc="/imgs/card-right-1.svg"
+          href="https://ui.figma.cool"
         />
         <Card
           title="FigmaCN"
