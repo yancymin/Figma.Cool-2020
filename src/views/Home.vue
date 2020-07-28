@@ -220,6 +220,14 @@
         </div>
       </div>
     </section>
+     <section class="section-3">
+      <Title :title="this.cnLang.title[2]" :des="this.cnLang.des[2]">
+        <TitleIcon3 />
+      </Title>
+      <div class="story">
+        {{this.cnLang.story}}
+      </div>
+     </section>
     <div class="HIDDEN">
       <TitleIcon1 />
       <TitleIcon2 />
@@ -259,8 +267,9 @@ export default {
     return {
       cnLang: {
         nav: ["Figma 中文计划", "Figma 插件", "我们的故事"],
-        title: ["Figma 中文计划", "Figma 插件"],
-        des: ["为中文母语使用者提供便捷", "持续的创造，全部开源"]
+        title: ["Figma 中文计划", "Figma 插件", "我们的故事"],
+        des: ["为中文母语使用者提供便捷", "持续的创造，全部开源", "持续的创造，全部开源"],
+        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
       }
     }
   }
@@ -391,6 +400,22 @@ export default {
       .card {
         margin-bottom: 20px;
       }
+    }
+  }
+
+  .section-3 {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc( 1340px - 160px);
+    max-width: 780px;
+    margin: var(--mg-1) 80px 0 80px;
+
+    .story {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: var(--mg-3);
+      text-align: left;
     }
   }
 }
