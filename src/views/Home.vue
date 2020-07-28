@@ -145,15 +145,14 @@
       <Logo class="Logo" />
       <div class="links">
         <a
-          :href="item"
+          :href="'#' + item"
           v-for="(item, index) in cnLang.nav"
           :key="index"
-          :id="item"
           >{{ item }}</a
         >
       </div>
     </nav>
-    <section class="section-1">
+    <section class="section-1" id="Figma 中文计划">
       <Title :title="this.cnLang.title[0]" :des="this.cnLang.des[0]">
         <TitleIcon1 />
       </Title>
@@ -177,7 +176,7 @@
         />
       </div>
     </section>
-    <section class="section-2">
+    <section class="section-2" id="Figma 插件">
       <Title :title="this.cnLang.title[1]" :des="this.cnLang.des[1]">
         <TitleIcon2 />
       </Title>
@@ -220,7 +219,7 @@
         </div>
       </div>
     </section>
-    <section class="section-3">
+    <section class="section-3" id="我们的故事">
       <Title :title="this.cnLang.title[2]" :des="this.cnLang.des[2]">
         <TitleIcon3 />
       </Title>
@@ -272,7 +271,15 @@
             <p class="name">加入我们</p>
           </div>
         </div>
-        <div class="bg"></div>
+        <div class="bg">
+          <img
+            v-for="(item, index) in new Array(20)"
+            :key="index"
+            :src="`imgs/` + (index + 1) + `.png`"
+            alt="index"
+            :class="`emoji-` + (index + 1)"
+          />
+        </div>
       </div>
     </section>
     <div class="HIDDEN">
@@ -557,6 +564,7 @@ export default {
     align-items: center;
     width: 100vw;
     margin-top: var(--mg-1);
+    margin-bottom: var(--mg-1);
 
     .contributor {
       position: relative;
@@ -605,6 +613,114 @@ export default {
 
       .bg {
         position: absolute;
+
+        img {
+          z-index: -1;
+          position: absolute;
+          width: 74px;
+          height: 74px;
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+
+          @for $i from 1 through 20 {
+            .emoji-#{$i} {
+                animation: move 8s ease infinite #{random(10)}s;
+
+                @keyframes move {
+                  0%, 100% {
+                      filter: blur(0);
+                      transform: scale(1.2) translateX(-8px) translateY(6px);
+                  }
+
+                  50% {
+                    filter: blur(2px);
+                    transform: scale(1) translateX(8px) translateY(-6px);
+                  }
+                }
+            }
+          }
+
+        .emoji-1 {
+          left: -550px;
+          top: 50px;
+        }
+        .emoji-2 {
+          left: -850px;
+          top: 270px;
+        }
+        .emoji-3 {
+          left: -420px;
+          top: 180px;
+        }
+        .emoji-4 {
+          left: -180px;
+          top: 320px;
+        }
+        .emoji-5 {
+          left: 100px;
+          top: 360px;
+        }
+        .emoji-6 {
+          left: -260px;
+          top: 210px;
+        }
+        .emoji-7 {
+          left: -160px;
+          top: -90px;
+        }
+        .emoji-8 {
+          left: 70px;
+          top: -40px;
+        }
+        .emoji-9 {
+          left: 320px;
+          top: 70px;
+        }
+        .emoji-10 {
+          left: 400px;
+          top: -20px;
+        }
+        .emoji-11 {
+          left: 460px;
+          top: 150px;
+        }
+        .emoji-12 {
+          left: 820px;
+          top: 120px;
+        }
+        .emoji-13 {
+          left: 520px;
+          top: 20px;
+        }
+        .emoji-14 {
+          left: 180px;
+          top: 220px;
+        }
+        .emoji-15 {
+          left: 669px;
+          top: 200px;
+        }
+        .emoji-16 {
+          left: 300px;
+          top: 270px;
+        }
+        .emoji-17 {
+          left: -610px;
+          top: 210px;
+        }
+        .emoji-18 {
+          left: -730px;
+          top: 100px;
+        }
+        .emoji-19 {
+          left: -430px;
+          top: -20px;
+        }
+        .emoji-20 {
+          left: -330px;
+          top: 300px;
+        }
       }
     }
   }

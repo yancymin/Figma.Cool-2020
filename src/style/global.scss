@@ -23,6 +23,10 @@
   --mg-4: 80px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .braille {
   z-index: -1;
   position: absolute;
