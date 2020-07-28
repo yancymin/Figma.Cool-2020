@@ -1,0 +1,59 @@
+:root {
+  --color-black-1: #212121;
+  --color-black-2: #292929;
+  --color-blue-1: #3e4373;
+  --color-blue-2: #5d6398;
+  --color-red-1: #f65c8a;
+  --color-purple-1: #5f5cf6;
+  --color-iceBlue-1: #00b5ff;
+  --color-yellow-1: #eba800;
+  --effect-1: 0px 1px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 1px rgba(92, 99, 163, 0.7);
+  --effect-2: 0px 1px 4px rgba(0, 0, 0, 0.7);
+  --color-gradient-1: linear-gradient(
+    92.84deg,
+    #605cf7 0%,
+    #f15c8d 36.46%,
+    #eba800 81.69%,
+    #01b5ff 100%
+  );
+  --mg-1: 200px;
+  --mg-2: 160px;
+  --mg-3: 140px;
+  --mg-4: 80px;
+}
+
+.braille {
+  z-index: -1;
+  position: absolute;
+  top: 860px;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  max-width: 100%;
+  width: 100vw;
+  font: 11px/12px 'Iosevka Web', monospace;
+  color: var(--color-blue-2);
+  will-change: transform;
+  transform: scale3d(1.4, 1.4, 1.4);
+}
+
+.braille > * {
+  white-space: pre;
+}
+
+.braille .hidden {
+  position: fixed;
+  bottom: 100%;
+  right: 100%;
+}
+
+body {
+  font-family: source-han-sans-simplified-c, sans-serif;
+  font-weight: 200;
+  background: var(--color-black-2);
+  overflow-x: hidden;
+  color: var(--color-blue-2);
+}
