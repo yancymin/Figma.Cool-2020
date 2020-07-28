@@ -47,6 +47,7 @@ export default {
   }
 
   .des {
+      opacity: 0.7;
       max-width: 423px;
       font-weight: 300;
     font-size: 14px;
@@ -55,7 +56,8 @@ export default {
 
   .right{
       position: absolute;
-      right: -10%;
+      top: 8px;
+      right: -18px;
   }
 }
 </style>

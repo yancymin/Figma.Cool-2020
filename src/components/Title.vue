@@ -31,7 +31,7 @@ export default {
         font-weight: 500;
         font-size: 16;
         line-height: 16px;
-        padding: 8px 16px;
+        padding: 4px 12px 5px 12px;
         border: 2px solid var(--color-blue-1);
         border-radius: 6px;
         margin-top: 48px;

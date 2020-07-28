@@ -153,13 +153,70 @@
         >
       </div>
     </nav>
-    <section>
-      <Title :title=this.cnLang.title[0] :des=this.cnLang.des[0]>
+    <section class="section-1">
+      <Title :title="this.cnLang.title[0]" :des="this.cnLang.des[0]">
         <TitleIcon1 />
       </Title>
       <div class="cardWrap">
-        <Card title="Figma.Cool" info="资源、插件推荐、教程文章" des="Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的Figma 共享平台。" imgSrc="/imgs/card-logo-1.svg" bgColor="background: var(--color-red-1)" right="/imgs/card-right-1.svg"/>
-        <Card title="FigmaCN" info="Figma 客户端汉化补丁、 Chrome 插件" des="现在，你可以使用客户端汉化补丁和 Chrome 浏览器插件来使 Figma 支持中文界面。" imgSrc="/imgs/card-logo-2.svg" bgColor="background: var(--color-purple-1)" right="/imgs/card-right-1.svg"/>
+        <Card
+          title="Figma.Cool"
+          info="资源、插件推荐、教程文章"
+          des="Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的Figma 共享平台。"
+          imgSrc="/imgs/card-logo-1.svg"
+          bgColor="background: var(--color-red-1)"
+          rightSrc="/imgs/card-right-1.svg"
+        />
+        <Card
+          title="FigmaCN"
+          info="Figma 客户端汉化补丁、 Chrome 插件"
+          des="现在，你可以使用客户端汉化补丁和 Chrome 浏览器插件来使 Figma 支持中文界面。"
+          imgSrc="/imgs/card-logo-2.svg"
+          bgColor="background: var(--color-purple-1)"
+          rightSrc="/imgs/card-right-2.svg"
+        />
+      </div>
+    </section>
+    <section class="section-2">
+      <Title :title="this.cnLang.title[1]" :des="this.cnLang.des[1]">
+        <TitleIcon2 />
+      </Title>
+      <div class="cardWrap">
+        <div class="left">
+          <PluginCard
+            title="Chinese Font Picker"
+            info="中文字体选择器"
+            des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+            imgSrc="/imgs/plugin-icon-1.svg"
+            rightSrc="/imgs/plugin-1.png"
+            href="https://www.figma.com/community/plugin/851126455550003999/Chinese-Font-Picker"
+          />
+          <PluginCard
+            title="Same Text Generator"
+            info="一键替换多个相同文本"
+            des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+            imgSrc="/imgs/plugin-icon-3.svg"
+            rightSrc="/imgs/plugin-3.png"
+            href="https://www.figma.com/community/plugin/863748474013054025/Same-Text-Generator"
+          />
+        </div>
+        <div class="right">
+          <PluginCard
+            title="Chinese User Data Generator"
+            info="中文用户数据生成器"
+            des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+            imgSrc="/imgs/plugin-icon-2.svg"
+            rightSrc="/imgs/plugin-2.png"
+            href="https://www.figma.com/community/plugin/864052338727969891/Chinese-User-Data-Generator"
+          />
+          <PluginCard
+            title="Unlocker"
+            info="锁定图层快速定位解锁"
+            des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+            imgSrc="/imgs/plugin-icon-4.svg"
+            rightSrc="/imgs/plugin-4.png"
+            href="https://www.figma.com/community/plugin/862912103841000337/Unlocker"
+          />
+        </div>
       </div>
     </section>
     <div class="HIDDEN">
@@ -177,6 +234,7 @@ import Slogan from "../assets/hero-slogan.svg"
 import Logo from "../assets/hero-logo.svg"
 import Title from "@/components/Title"
 import Card from "@/components/Card"
+import PluginCard from "@/components/PluginCard"
 import TitleIcon1 from "../assets/title-1.svg"
 import TitleIcon2 from "../assets/title-2.svg"
 import TitleIcon3 from "../assets/title-3.svg"
@@ -193,14 +251,15 @@ export default {
     TitleIcon2,
     TitleIcon3,
     TitleIcon4,
-    Card
+    Card,
+    PluginCard
   },
   data () {
     return {
       cnLang: {
         nav: ["Figma 中文计划", "Figma 插件", "我们的故事"],
-        title: ["Figma 中文计划"],
-        des: ["为中文母语使用者提供便捷"]
+        title: ["Figma 中文计划", "Figma 插件"],
+        des: ["为中文母语使用者提供便捷", "持续的创造，全部开源"]
       }
     }
   }
@@ -284,15 +343,14 @@ export default {
     margin: 0 0 var(--mg-4) 0;
   }
 
-  section {
+  .section-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
     padding: var(--mg-1) 0;
-    height: 1600px;
     margin-top: 24px;
-    background-color: var(--color-black-1);
+    background-color: var(--color-black-2);
 
     .cardWrap {
       width: 100%;
@@ -304,6 +362,33 @@ export default {
 
       .card {
         max-width: calc(50% - 10px);
+      }
+    }
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 24px;
+
+    .cardWrap {
+      width: 100%;
+      max-width: calc(1340px - 160px);
+      margin: 0 80px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: var(--mg-2);
+
+      .left,
+      .right {
+        width: 100%;
+        max-width: calc(50% - 10px);
+      }
+
+      .card {
+        margin-bottom: 20px;
       }
     }
   }
