@@ -4,19 +4,20 @@
     <h3 class="title">{{ title }}</h3>
     <p class="info">{{ info }}</p>
     <p class="des">{{ des }}</p>
-    <i :style="rightImg"></i>
+    <img :src="rightSrc" alt="" srcset="" class="right">
   </div>
 </template>
 
 <script>
 export default {
   name: "card",
-  props: ["imgSrc", "title", "info", "des", "bgColor", "rightImg"]
+  props: ["imgSrc", "title", "info", "des", "bgColor", "rightSrc"]
 }
 </script>
 
 <style lang="scss" scoped>
 .card {
+    position: relative;
   width: 100%;
   padding: 32px;
   display: flex;
@@ -50,6 +51,11 @@ export default {
       font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .right{
+      position: absolute;
+      right: -10%;
   }
 }
 </style>
