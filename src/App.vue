@@ -125,7 +125,7 @@ export default {
     }
   },
   mounted () {
-    window.onload = this.earth
+    // window.onload = this.earth
   }
 }
 </script>

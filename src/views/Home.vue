@@ -220,14 +220,61 @@
         </div>
       </div>
     </section>
-     <section class="section-3">
+    <section class="section-3">
       <Title :title="this.cnLang.title[2]" :des="this.cnLang.des[2]">
         <TitleIcon3 />
       </Title>
       <div class="story">
-        {{this.cnLang.story}}
+        {{ this.cnLang.story }}
       </div>
-     </section>
+      <div class="cardWrap">
+        <div class="infoCard">
+          <!-- <CardBg class="cardBg" /> -->
+          <img src="../assets/avatar-1.png" alt="avatar" class="avatar" />
+          <h1>Yancy Min</h1>
+          <p>I see reflections in your eyes.</p>
+          <div class="links">
+            <a href=""><Site /></a>
+            <a href=""><Dribbble /></a>
+            <a href=""><Twitter /></a>
+            <a href=""><Github /></a>
+            <a href=""><Codepen /></a>
+            <a href=""><Instagram /></a>
+          </div>
+        </div>
+        <div class="infoCard">
+          <img src="../assets/avatar-2.png" alt="avatar" class="avatar" />
+          <h1>Coiven</h1>
+          <p>I see reflections in your eyes.</p>
+          <div class="links">
+            <a href=""><Twitter /></a>
+            <a href=""><Github /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-4">
+      <Title :title="this.cnLang.title[3]" :des="this.cnLang.des[3]">
+        <TitleIcon4 />
+      </Title>
+      <div class="contributor">
+        <div class="cardWrap">
+          <div class="card">
+            <img src="../assets/avatar-3.png" alt="" />
+            <p class="name">Pluwen</p>
+          </div>
+          <div class="card">
+            <img src="../assets/avatar-4.png" alt="" />
+            <p class="name">Neko</p>
+          </div>
+          <div class="card">
+            <img src="/imgs/add.svg" alt="add" />
+            <p class="name">加入我们</p>
+          </div>
+        </div>
+        <div class="bg"></div>
+      </div>
+    </section>
     <div class="HIDDEN">
       <TitleIcon1 />
       <TitleIcon2 />
@@ -248,6 +295,13 @@ import TitleIcon1 from "../assets/title-1.svg"
 import TitleIcon2 from "../assets/title-2.svg"
 import TitleIcon3 from "../assets/title-3.svg"
 import TitleIcon4 from "../assets/title-4.svg"
+// import CardBg from "../assets/ourstory-card-bg.svg"
+import Github from "../assets/ourstory-icon-github.svg"
+import Dribbble from "../assets/ourstory-icon-dribbble.svg"
+import Twitter from "../assets/ourstory-icon-twitter.svg"
+import Codepen from "../assets/ourstory-icon-codepen.svg"
+import Instagram from "../assets/ourstory-icon-instagram.svg"
+import Site from "../assets/ourstory-icon-site.svg"
 
 export default {
   name: "Home",
@@ -261,14 +315,26 @@ export default {
     TitleIcon3,
     TitleIcon4,
     Card,
-    PluginCard
+    PluginCard,
+    // CardBg,
+    Github,
+    Dribbble,
+    Twitter,
+    Codepen,
+    Instagram,
+    Site
   },
   data () {
     return {
       cnLang: {
         nav: ["Figma 中文计划", "Figma 插件", "我们的故事"],
-        title: ["Figma 中文计划", "Figma 插件", "我们的故事"],
-        des: ["为中文母语使用者提供便捷", "持续的创造，全部开源", "持续的创造，全部开源"],
+        title: ["Figma 中文计划", "Figma 插件", "我们的故事", "项目贡献者"],
+        des: [
+          "为中文母语使用者提供便捷",
+          "持续的创造，全部开源",
+          "持续的创造，全部开源",
+          "为 Figma 贡献力量"
+        ],
         story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
       }
     }
@@ -404,10 +470,10 @@ export default {
   }
 
   .section-3 {
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc( 1340px - 160px);
+    width: calc(1340px - 160px);
     max-width: 780px;
     margin: var(--mg-1) 80px 0 80px;
 
@@ -416,6 +482,130 @@ export default {
       line-height: 30px;
       margin-top: var(--mg-3);
       text-align: left;
+      margin-bottom: var(--mg-3);
+    }
+
+    .cardWrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .infoCard {
+      position: relative;
+      width: 100%;
+      max-width: calc(50% - 10px);
+      background-color: #212121;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+      border-radius: 32px;
+      padding: 40px 16px 16px;
+      text-align: left;
+      background-image: url("/imgs/cardBg.svg");
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: 65%;
+
+      .avatar {
+        margin-left: 24px;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 56px;
+      }
+
+      h1 {
+        margin-left: 24px;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-left: 24px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 64px;
+      }
+
+      .cardBg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .links {
+        z-index: 9;
+        width: 100%;
+        padding: 16px 0;
+        background: #292929;
+        box-shadow: 0px -1px 0px #2e2e2e;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+
+        a {
+          margin: 0 16px;
+        }
+      }
+    }
+  }
+
+  .section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: var(--mg-1);
+
+    .contributor {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: var(--mg-1);
+
+      .cardWrap {
+        width: calc(1340px - 160px);
+        max-width: 575px;
+        margin: 0 80px 0 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+          max-width: calc(50% - 20px);
+          width: 100%;
+          padding: 32px;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          background: #212121;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+          border-radius: 32px;
+          margin: 10px;
+
+          img {
+            width: 100px;
+            height: 100px;
+            margin-right: 24px;
+          }
+
+          &:last-child {
+            max-width: 42%;
+            img {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+      }
+
+      .bg {
+        position: absolute;
+      }
     }
   }
 }
