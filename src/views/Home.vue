@@ -278,6 +278,7 @@
             :src="`imgs/` + (index + 1) + `.png`"
             alt="index"
             :class="`emoji-` + (index + 1)"
+            class="emoji"
           />
         </div>
       </div>
@@ -345,6 +346,26 @@ export default {
         story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
       }
     }
+  },
+  mounted () {
+    const Section4ClientTop = document.querySelector(".section-4").offsetTop
+    const emojis = document.querySelectorAll(".emoji")
+    console.log(Section4ClientTop)
+
+    window.addEventListener("scroll", () => {
+      var scrollTop = 0
+      if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop
+      } else if (document.body) {
+        scrollTop = document.body.scrollTop
+      }
+      if (scrollTop >= Section4ClientTop) {
+        setInterval(() => {
+          const randomNum = Math.floor(Math.random() * 20)
+          emojis[randomNum].classList.add('emoji-show')
+        }, 300)
+      }
+    })
   }
 }
 </script>
@@ -615,31 +636,36 @@ export default {
         position: absolute;
 
         img {
+          opacity: 0;
           z-index: -1;
           position: absolute;
           width: 74px;
           height: 74px;
-          transition: all 0.3s ease;
+          transition: all 2s ease;
           pointer-events: none;
+          will-change: transform;
+          filter: blur(0);
+          transform: scale(1.2) translateX(-8px) translateY(6px);
         }
 
-          @for $i from 1 through 20 {
-            .emoji-#{$i} {
-                animation: move 8s ease infinite #{random(10)}s;
+        @for $i from 1 through 20 {
+          .emoji-#{$i} {
+            animation: move 10s ease-out infinite #{random(10)}s;
 
-                @keyframes move {
-                  0%, 100% {
-                      filter: blur(0);
-                      transform: scale(1.2) translateX(-8px) translateY(6px);
-                  }
+            @keyframes move {
+              0%,
+              100% {
+                filter: blur(0);
+                transform: scale(1.2) translateX(-8px) translateY(6px);
+              }
 
-                  50% {
-                    filter: blur(2px);
-                    transform: scale(1) translateX(8px) translateY(-6px);
-                  }
-                }
+              50% {
+                filter: blur(2px);
+                transform: scale(1) translateX(8px) translateY(-6px);
+              }
             }
           }
+        }
 
         .emoji-1 {
           left: -550px;
@@ -728,5 +754,9 @@ export default {
 
 .HIDDEN {
   display: none;
+}
+
+.emoji-show {
+  opacity: 1 !important;
 }
 </style>
