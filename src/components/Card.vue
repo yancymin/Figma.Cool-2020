@@ -1,6 +1,6 @@
 <template>
   <a class="card" :style="bgColor" :href="href" target="_blank">
-    <img :src="imgSrc" :alt="imgSrc"  class="logo" />
+    <img :src="imgSrc" :alt="imgSrc" class="logo" />
     <h3 class="title">{{ title }}</h3>
     <p class="info">{{ info }}</p>
     <p class="des">{{ des }}</p>
