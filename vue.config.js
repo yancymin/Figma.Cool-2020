@@ -1,4 +1,11 @@
 module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        implementation: require('sass'), // This line must in sass option
+      },
+    }
+  },
   chainWebpack: config => {
     const svgRule = config.module.rule("svg")
 
