@@ -313,7 +313,7 @@
 </template>
 
 <script>
-import { TweenMax } from "gsap"
+// import { TweenMax } from "gsap"
 import ScrollText from "../assets/hero-scroll.svg"
 import Slogan from "../assets/hero-slogan.svg"
 import Logo from "../assets/hero-logo.svg"
@@ -426,54 +426,54 @@ export default {
     })
 
     //  cursor ______________________________________
-    const circle = document.querySelector(".cursor")
-    const links = document.querySelectorAll("a")
+    // const circle = document.querySelector(".cursor")
+    // const links = document.querySelectorAll("a")
 
-    window.addEventListener("mousemove", moveCircle)
+    // window.addEventListener("mousemove", moveCircle)
 
-    TweenMax.set(circle, {
-      xPercent: -50,
-      yPercent: -50
-    })
+    // TweenMax.set(circle, {
+    //   xPercent: -50,
+    //   yPercent: -50
+    // })
 
-    function moveCircle (e) {
-      TweenMax.to(circle, {
-        duration: 0.0001,
-        x: e.clientX,
-        y: e.clientY
-      })
-    }
+    // function moveCircle (e) {
+    //   TweenMax.to(circle, {
+    //     duration: 0.0001,
+    //     x: e.clientX,
+    //     y: e.clientY
+    //   })
+    // }
 
-    function linkAnimIn () {
-      TweenMax.to(circle, {
-        duration: 0.2,
-        scale: 2,
-        opacity: 0.2
-      })
-      TweenMax.to(circle.querySelector("circle"), {
-        fill: "white"
-      })
-    }
+    // function linkAnimIn () {
+    //   TweenMax.to(circle, {
+    //     duration: 0.2,
+    //     scale: 2,
+    //     opacity: 0.2
+    //   })
+    //   TweenMax.to(circle.querySelector("circle"), {
+    //     fill: "white"
+    //   })
+    // }
 
-    function linkAnimOut () {
-      TweenMax.to(circle, {
-        duration: 0.2,
-        scale: 1,
-        opacity: 1
-      })
-      TweenMax.to(circle.querySelector("circle"), {
-        fill: "#F65C8A"
-      })
-    }
+    // function linkAnimOut () {
+    //   TweenMax.to(circle, {
+    //     duration: 0.2,
+    //     scale: 1,
+    //     opacity: 1
+    //   })
+    //   TweenMax.to(circle.querySelector("circle"), {
+    //     fill: "#F65C8A"
+    //   })
+    // }
 
-    links.forEach(link => {
-      link.addEventListener("mouseover", e => {
-        linkAnimIn()
-      })
-      link.addEventListener("mouseout", e => {
-        linkAnimOut()
-      })
-    })
+    // links.forEach(link => {
+    //   link.addEventListener("mouseover", e => {
+    //     linkAnimIn()
+    //   })
+    //   link.addEventListener("mouseout", e => {
+    //     linkAnimOut()
+    //   })
+    // })
   }
 }
 </script>
@@ -933,7 +933,7 @@ export default {
   }
 }
 
-.cursor {
+/* .cursor {
   position: fixed;
   top: 0;
   left: 0;
@@ -944,7 +944,7 @@ export default {
   svg {
     overflow: visible;
   }
-}
+} */
 
 .section-show {
   opacity: 1 !important;

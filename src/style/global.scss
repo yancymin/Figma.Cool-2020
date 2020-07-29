@@ -35,14 +35,14 @@ html {
 .braille {
   z-index: -1;
   position: absolute;
-  top: 860px;
+  top: 820px;
   opacity: 0.5;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: row;
   max-width: 100%;
-  min-height: 1575px;
+  min-height: 1300px;
   width: 100vw;
   font: 11px/12px 'Iosevka Web', monospace;
   color: var(--color-blue-2);
