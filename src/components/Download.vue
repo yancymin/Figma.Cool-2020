@@ -380,7 +380,7 @@ export default {
             text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
             margin-bottom: 48px;
 
-            &:nth-of-type(2) {
+            &:nth-of-type(2), &:nth-of-type(3) {
               margin-top: 120px;
             }
           }

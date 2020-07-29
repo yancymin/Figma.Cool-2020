@@ -386,7 +386,7 @@ export default {
       }
     },
     downloadPage () {
-      document.body.scrollTop = 0
+      window.scrollTo(0, 0)
       this.downloadShow = 1
     }
   },
@@ -433,8 +433,7 @@ export default {
 
     TweenMax.set(circle, {
       xPercent: -50,
-      yPercent: -50,
-      display: "none"
+      yPercent: -50
     })
 
     function moveCircle (e) {
@@ -935,7 +934,6 @@ export default {
 }
 
 .cursor {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
