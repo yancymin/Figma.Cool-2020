@@ -30,15 +30,37 @@
       </div>
       <div class="content">
         <div class="client" v-show="this.target1">
-          <a class="left" href="/app.asar" download="app.asar">
+          <div class="left">
             <img src="../assets/download-icon-client.png" alt="" />
-            <Arrow />
-          </a>
+            <div class="links">
+              <a href="/macOS/app.asar" download="app.asar" class="mac">
+                <Apple />
+              </a>
+              <a href="/Windows/app.asar" download="app.asar" class="win">
+                <Windows />
+              </a>
+            </div>
+          </div>
           <div class="right">
-            <h3>安装指南</h3>
+            <h3>macOS 安装指南</h3>
             <ul>
               <li>
                 下载 app.asar 文件，在 Finder
+                （访达）中进入<strong>「应用程序」</strong>文件夹；
+              </li>
+              <li>
+                在「应用程序」中，找到
+                Figma，右键选择<strong>「显示包内容」</strong>进入；
+              </li>
+              <li>
+                把 app.asar 文件放入 <strong>Contents/Resources</strong>，重启
+                Figma 。
+              </li>
+            </ul>
+            <h3>Windows 安装指南</h3>
+            <ul>
+              <li>
+                下载 app.asar 文件，在
                 （访达）中进入<strong>「应用程序」</strong>文件夹；
               </li>
               <li>
@@ -69,7 +91,10 @@
         </div>
         <div class="chrome" v-show="this.target2">
           <div class="left">
-            <a href="https://chrome.google.com/webstore/detail/figmacn/japkpjkpfdakpkbcehooampdjfgefndj" target="_blank">
+            <a
+              href="https://chrome.google.com/webstore/detail/figmacn/japkpjkpfdakpkbcehooampdjfgefndj"
+              target="_blank"
+            >
               <img src="../assets/download-icon-store.png" alt="" />
             </a>
             <a href="/figmaCN.zip" download="figmaCN.zip">
@@ -107,11 +132,12 @@
               <p>不会，我们仅是做了界面的汉化，没有改动任何功能性程序。</p>
               <li>选择哪种安装方式？</li>
               <p>
-                  如果可以科学上网，推荐商店安装，方便后续自动更新。
+                如果可以科学上网，推荐商店安装，方便后续自动更新。
               </p>
               <li>不想用汉化了怎么办？</li>
               <p>
-                   地址栏输入 chrome://extensions 进入扩展程序管理界面，找到该插件，点击关闭按钮即可。
+                地址栏输入 chrome://extensions
+                进入扩展程序管理界面，找到该插件，点击关闭按钮即可。
               </p>
             </ul>
           </div>
@@ -123,6 +149,8 @@
       <CNLogo />
       <Icon1 />
       <Arrow />
+      <Apple />
+      <Windows />
     </div>
   </div>
 </template>
@@ -133,6 +161,8 @@ import FooterCom from "@/components/FooterCom"
 import CNLogo from "../assets/download-logo.svg"
 import Icon1 from "../assets/download-icon-1.svg"
 import Arrow from "../assets/download-icon-arrow.svg"
+import Windows from "../assets/windows.svg"
+import Apple from "../assets/apple.svg"
 
 export default {
   name: "Download",
@@ -141,7 +171,9 @@ export default {
     CNLogo,
     Icon1,
     Arrow,
-    FooterCom
+    FooterCom,
+    Windows,
+    Apple
   },
   data () {
     return {
@@ -278,6 +310,40 @@ export default {
           border-radius: 32px;
           cursor: pointer;
 
+          .links {
+              position: relative;
+              bottom: -6px;
+              display: flex;
+                z-index: 9;
+                width: 90%;
+                padding: 0 16px;
+                background: #292929;
+                box-shadow: 0px -1px 0px #2e2e2e;
+                border-radius: 16px;
+                display: flex;
+                justify-content: center;
+              a {
+                  width: 100%;
+                  margin: 0 20px;
+                  padding: 16px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                      svg {
+                          path {
+                              transition: all 0.3s ease;
+
+                          }
+                      }
+
+                  &:hover {
+                      path {
+                          fill:rgba(255, 255, 255, 1)
+                      }
+                  }
+              }
+          }
+
           img {
             height: 100px;
             margin-bottom: 40px;
@@ -372,29 +438,29 @@ export default {
         max-width: 1180px;
 
         .left {
-            width: 30%;
-         a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          height: 268px;
-          padding: 40px 0;
-          background: var(--color-black-1);
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
-          border-radius: 32px;
-          cursor: pointer;
-          margin-bottom: 32px;
+          width: 30%;
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 268px;
+            padding: 40px 0;
+            background: var(--color-black-1);
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+            border-radius: 32px;
+            cursor: pointer;
+            margin-bottom: 32px;
 
-          &:first-child {
+            &:first-child {
               justify-content: center;
               height: auto;
 
               img {
-                  height: 48px;
-                  margin: 0;
+                height: 48px;
+                margin: 0;
               }
+            }
           }
-         }
 
           img {
             height: 100px;
