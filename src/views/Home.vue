@@ -217,6 +217,7 @@
             imgSrc="imgs/Plugin-icon-4.svg"
             rightSrc="imgs/plugin-4.png"
             href="https://www.figma.com/community/plugin/862912103841000337/Unlocker"
+            bgColor="#333"
           />
         </div>
       </div>
@@ -949,5 +950,70 @@ export default {
 .section-show {
   opacity: 1 !important;
   transform: perspective(0) rotateX(0) translateY(0%) !important;
+}
+
+.section-2 .cardWrap .left{
+  ::v-deep .card {
+     &:nth-of-type(1) {
+         &:hover {
+          background: #09b5ff;
+          color: #01445f;
+
+          h3, p{
+          color: #01445f;
+          }
+
+          .des {
+            opacity: 1;
+          }
+         }
+     }
+     &:nth-of-type(2) {
+         &:hover {
+          background: #eba801;
+          color: #674b04;
+
+          h3, p{
+          color: #674b04;
+          }
+
+          .des {
+            opacity: 1;
+          }
+         }
+     }
+  }
+}
+.section-2 .cardWrap .right{
+  ::v-deep .card {
+     &:nth-of-type(1) {
+         &:hover {
+          background: rgb(117, 114, 255);
+          color: #212642;
+
+          h3, p{
+          color: #212642;
+          }
+
+          .des {
+            opacity: 1;
+          }
+         }
+     }
+     &:nth-of-type(2) {
+         &:hover {
+          background: #eba801;
+          color: #674b04;
+
+          h3, p{
+          color: #674b04;
+          }
+
+          .des {
+            opacity: 1;
+          }
+         }
+     }
+  }
 }
 </style>

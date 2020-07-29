@@ -1,5 +1,5 @@
 <template>
-  <a class="card" :href="href" target="_blank">
+  <a class="card" :href="href" target="_blank" ref="card">
     <div class="left">
       <img :src="imgSrc" :alt="imgSrc" class="logo" />
       <h3 class="title">{{ title }}</h3>
@@ -13,7 +13,7 @@
 <script>
 export default {
   name: "card",
-  props: ["imgSrc", "title", "info", "des", "rightSrc", "href"]
+  props: ["imgSrc", "title", "info", "des", "rightSrc", "href", "bgColor"]
 }
 </script>
 
@@ -30,20 +30,17 @@ export default {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25),
     inset 0px 1px 1px rgba(92, 99, 163, 0.7);
   color: white;
+  cursor: pointer;
   background: #3e4373;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   overflow: hidden;
 
   &:hover {
-    transform: scale(0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
 
     .right {
-      transform: scale(0.9) perspective(630px) rotateY(-20deg) rotateZ(2deg);
+      transform: scale3d(0.9, 0.9, 0.9) perspective(630px) rotateY(-20deg) rotateZ(2deg);
     }
-  }
-
-  & > * {
-    transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .logo {
@@ -78,6 +75,7 @@ export default {
   .right {
     width: 100%;
     max-width: 207px;
+    transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 }
 </style>

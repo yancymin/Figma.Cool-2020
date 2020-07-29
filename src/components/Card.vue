@@ -27,6 +27,7 @@ export default {
   text-align: left;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.2);
   color: white;
+  cursor: pointer;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &:hover {
