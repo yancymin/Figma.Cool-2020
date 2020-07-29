@@ -31,13 +31,27 @@ export default {
     inset 0px 1px 1px rgba(92, 99, 163, 0.7);
   color: white;
   background: #3e4373;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(0.97);
+
+    .right {
+      transform: scale(0.9) perspective(630px) rotateY(-20deg) rotateZ(2deg);
+    }
+  }
+
+  & > * {
+    transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 
   .logo {
     margin-bottom: 32px;
   }
 
   .title {
-    color: #D8D9E3;
+    color: #d8d9e3;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
@@ -45,7 +59,7 @@ export default {
   }
 
   .info {
-    color: #D8D9E3;
+    color: #d8d9e3;
     font-weight: 300;
     font-size: 24px;
     line-height: 24px;

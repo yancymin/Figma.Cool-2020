@@ -1,10 +1,10 @@
 <template>
-  <a class="card" :style="bgColor" :href="href" target="_blank">
+  <a class="card hover-this" :style="bgColor" :href="href" target="_blank">
     <img :src="imgSrc" :alt="imgSrc" class="logo" />
     <h3 class="title">{{ title }}</h3>
     <p class="info">{{ info }}</p>
     <p class="des">{{ des }}</p>
-    <img :src="rightSrc" :alt="rightSrc" class="right">
+    <img :src="rightSrc" :alt="rightSrc" class="right" />
   </a>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-    position: relative;
+  position: relative;
   width: 100%;
   padding: 32px;
   display: flex;
@@ -27,6 +27,19 @@ export default {
   text-align: left;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.2);
   color: white;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    transform: scale(0.975);
+
+    .right {
+      transform: scale(1.15);
+    }
+  }
+
+  & > * {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 
   .logo {
     margin-bottom: 32px;
@@ -40,24 +53,25 @@ export default {
   }
 
   .info {
-      font-weight: 300;
-        font-size: 20px;
-        line-height: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
     margin-bottom: 32px;
   }
 
   .des {
-      opacity: 0.7;
-      max-width: 423px;
-      font-weight: 300;
+    opacity: 0.7;
+    max-width: 423px;
+    font-weight: 300;
     font-size: 14px;
     line-height: 20px;
   }
 
-  .right{
-      position: absolute;
-      top: 8px;
-      right: -18px;
+  .right {
+    position: absolute;
+    top: 8px;
+    right: -18px;
+    transform-origin: right;
   }
 }
 </style>

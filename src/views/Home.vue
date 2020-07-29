@@ -290,10 +290,21 @@
       <TitleIcon3 />
       <TitleIcon4 />
     </div>
+    <svg
+      class="cursor"
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="9" cy="9" r="9" fill="#F65C8A" />
+    </svg>
   </div>
 </template>
 
 <script>
+import { TweenMax, Power2 } from "gsap"
 import ScrollText from "../assets/hero-scroll.svg"
 import Slogan from "../assets/hero-slogan.svg"
 import Logo from "../assets/hero-logo.svg"
@@ -348,24 +359,98 @@ export default {
       }
     }
   },
-  mounted () {
-    const Section4ClientTop = document.querySelector(".section-4").offsetTop
-    const emojis = document.querySelectorAll(".emoji")
-    console.log(Section4ClientTop)
-
-    window.addEventListener("scroll", () => {
-      var scrollTop = 0
+  methods: {
+    scrollTo (item, fun) {
+      let scrollTop = 0
       if (document.documentElement && document.documentElement.scrollTop) {
         scrollTop = document.documentElement.scrollTop
       } else if (document.body) {
         scrollTop = document.body.scrollTop
       }
-      if (scrollTop >= Section4ClientTop) {
-        setInterval(() => {
+      if (scrollTop + 1100 >= item.offsetTop) {
+        fun()
+      }
+    }
+  },
+  mounted () {
+    const Section1Top = document.querySelector(".section-1")
+    const Section2Top = document.querySelector(".section-2")
+    const Section3Top = document.querySelector(".section-3")
+    const Section4Top = document.querySelector(".section-4")
+    const emojis = document.querySelectorAll(".emoji")
+
+    window.addEventListener("scroll", () => {
+      this.scrollTo(Section1Top, () => {
+        Section1Top.classList.add("section-show")
+      })
+      this.scrollTo(Section2Top, () => {
+        Section2Top.classList.add("section-show")
+      })
+      this.scrollTo(Section3Top, () => {
+        Section3Top.classList.add("section-show")
+      })
+      this.scrollTo(Section4Top, () => {
+        Section4Top.classList.add("section-show")
+        const emoji = setInterval(() => {
           const randomNum = Math.floor(Math.random() * 20)
           emojis[randomNum].classList.add("emoji-show")
         }, 300)
-      }
+        setTimeout(() => {
+          clearInterval(emoji)
+        }, 12000)
+      })
+    })
+
+    //  cursor ______________________________________
+    const circle = document.querySelector(".cursor")
+    const links = document.querySelectorAll("a")
+
+    window.addEventListener("mousemove", moveCircle)
+
+    TweenMax.set(circle, {
+      xPercent: -50,
+      yPercent: -50
+    })
+
+    function moveCircle (e) {
+      TweenMax.to(circle, {
+        duration: 0.0001,
+        opacity: 1,
+        x: e.clientX,
+        y: e.clientY,
+        ease: Power2.easeOut
+      })
+    }
+
+    function linkAnimIn () {
+      TweenMax.to(circle, {
+        duration: 0.2,
+        scale: 2,
+        opacity: 0.2
+      })
+      TweenMax.to(circle.querySelector("circle"), {
+        fill: "white"
+      })
+    }
+
+    function linkAnimOut () {
+      TweenMax.to(circle, {
+        duration: 0.2,
+        scale: 1,
+        opacity: 1
+      })
+      TweenMax.to(circle.querySelector("circle"), {
+        fill: "#F65C8A"
+      })
+    }
+
+    links.forEach(link => {
+      link.addEventListener("mouseover", e => {
+        linkAnimIn()
+      })
+      link.addEventListener("mouseout", e => {
+        linkAnimOut()
+      })
     })
   }
 }
@@ -433,10 +518,39 @@ export default {
     }
 
     a {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       font-weight: 500;
       font-size: 16px;
       line-height: 16px;
       margin: 0 40px 0 0;
+      padding: 2px;
+
+      &:hover {
+        color: #B2B4C7;
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      &::after {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 8px 8px 9px 8px;
+        background: #3E4373;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(92, 99, 163, 0.7);
+        border-radius: 8px;
+        transform: scale(0.96);
+        transition: all 0.25s ease-out;
+      }
 
       &:last-child {
         margin: 0;
@@ -446,6 +560,13 @@ export default {
 
   .Logo {
     margin: 0 0 var(--mg-4) 0;
+  }
+
+  section {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    transform: perspective(1000px) rotateX(20deg) translateY(2%);
+    transform-origin: top;
   }
 
   .section-1 {
@@ -763,7 +884,7 @@ export default {
 
 .logo-motion {
   will-change: transform;
-  animation: moving 10s infinite ease;
+  animation: moving 14s infinite ease-out both;
 
   &:nth-of-type(1) {
     transform-origin: left top;
@@ -774,13 +895,33 @@ export default {
 
   @keyframes moving {
     0%,
-    80% {
-      transform: rotateZ(0) scale3d(1.4, 1.4, 1.4);
-    }
-    40%,
+    60%,
     100% {
-      transform: rotateZ(360deg) scale3d(0.8, 0.8, 0.8);
+      transform: rotate3d(0, 0, 1, 0deg) scale3d(1.4, 1.4, 1.4);
+    }
+    30%,
+    80% {
+      transform: rotate3d(0, 0, 1, 360deg) scale3d(0.8, 0.8, 0.8);
     }
   }
+}
+
+.cursor {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999999;
+  overflow: visible;
+
+  svg {
+    overflow: visible;
+  }
+}
+
+.section-show {
+  opacity: 1 !important;
+  transform: perspective(1000px) rotateX(0) translateY(0%) !important;
 }
 </style>
