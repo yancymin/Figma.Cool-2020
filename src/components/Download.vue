@@ -1,5 +1,5 @@
 <template>
-  <div class="download">
+  <div class="download" :class="{ downloadShow: this.downloadShow }">
     <Title title="FigmaCN" des="Figma 客户端汉化补丁、 Chrome 插件">
       <CNLogo />
     </Title>
@@ -151,7 +151,11 @@
       <Arrow />
       <Apple />
       <Windows />
+      <Close />
     </div>
+    <i class="close" @click="()=> {this.downloadShow = 0}">
+      <Close />
+    </i>
   </div>
 </template>
 
@@ -163,6 +167,7 @@ import Icon1 from "../assets/download-icon-1.svg"
 import Arrow from "../assets/download-icon-arrow.svg"
 import Windows from "../assets/windows.svg"
 import Apple from "../assets/apple.svg"
+import Close from "../assets/close.svg"
 
 export default {
   name: "Download",
@@ -173,12 +178,15 @@ export default {
     Arrow,
     FooterCom,
     Windows,
-    Apple
+    Apple,
+    Close
   },
+  props: [close],
   data () {
     return {
       target1: 1,
-      target2: 0
+      target2: 0,
+      downloadShow: this.close
     }
   },
   methods: {
@@ -192,6 +200,7 @@ export default {
 
 <style lang="scss" scoped>
 .download {
+  visibility: hidden;
   z-index: 99999;
   position: absolute;
   top: 0;
@@ -311,37 +320,36 @@ export default {
           cursor: pointer;
 
           .links {
-              position: relative;
-              bottom: -6px;
+            position: relative;
+            bottom: -6px;
+            display: flex;
+            z-index: 9;
+            width: 90%;
+            padding: 0 16px;
+            background: #292929;
+            box-shadow: 0px -1px 0px #2e2e2e;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            a {
+              width: 100%;
+              margin: 0 20px;
+              padding: 16px;
               display: flex;
-                z-index: 9;
-                width: 90%;
-                padding: 0 16px;
-                background: #292929;
-                box-shadow: 0px -1px 0px #2e2e2e;
-                border-radius: 16px;
-                display: flex;
-                justify-content: center;
-              a {
-                  width: 100%;
-                  margin: 0 20px;
-                  padding: 16px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                      svg {
-                          path {
-                              transition: all 0.3s ease;
-
-                          }
-                      }
-
-                  &:hover {
-                      path {
-                          fill:rgba(255, 255, 255, 1)
-                      }
-                  }
+              justify-content: center;
+              align-items: center;
+              svg {
+                path {
+                  transition: all 0.3s ease;
+                }
               }
+
+              &:hover {
+                path {
+                  fill: rgba(255, 255, 255, 1);
+                }
+              }
+            }
           }
 
           img {
@@ -566,5 +574,24 @@ export default {
     opacity: 1 !important;
     transform: scale(1) !important;
   }
+}
+
+.close {
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+
+  &:hover {
+    background: #3d3d3d;
+  }
+}
+
+.downloadShow {
+  visibility: visible;
 }
 </style>

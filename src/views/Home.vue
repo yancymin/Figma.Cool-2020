@@ -174,6 +174,7 @@
           imgSrc="/imgs/card-logo-2.svg"
           bgColor="background: var(--color-purple-1)"
           rightSrc="/imgs/card-right-2.svg"
+          @click="()=>{this.downloadShow = 1}"
         />
       </div>
     </section>
@@ -301,7 +302,7 @@
       <circle cx="9" cy="9" r="9" fill="#F65C8A" />
     </svg>
     <FooterCom />
-    <Download/>
+    <Download :close="this.downloadShow"/>
   </div>
 </template>
 
@@ -361,7 +362,8 @@ export default {
           "持续的创造，全部开源",
           "为 Figma 贡献力量"
         ],
-        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
+        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`,
+        downloadShow: 0
       }
     }
   },
