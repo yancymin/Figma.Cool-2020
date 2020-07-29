@@ -1,5 +1,5 @@
 <template>
-  <div class="download" :class="{ downloadShow: this.downloadShow }">
+  <div class="download" :class="{ downloadShow: this.downloadClose }">
     <Title title="FigmaCN" des="Figma 客户端汉化补丁、 Chrome 插件">
       <CNLogo />
     </Title>
@@ -153,7 +153,14 @@
       <Windows />
       <Close />
     </div>
-    <i class="close" @click="()=> {this.downloadShow = 0}">
+    <i
+      class="close"
+      @click="
+        () => {
+          this.downloadClose = 0;
+        }
+      "
+    >
       <Close />
     </i>
   </div>
@@ -181,12 +188,14 @@ export default {
     Apple,
     Close
   },
-  props: [close],
+  props: ["downloadClose"],
+  mounted () {
+    console.log(this.downloadClose)
+  },
   data () {
     return {
       target1: 1,
-      target2: 0,
-      downloadShow: this.close
+      target2: 0
     }
   },
   methods: {

@@ -174,7 +174,7 @@
           imgSrc="/imgs/card-logo-2.svg"
           bgColor="background: var(--color-purple-1)"
           rightSrc="/imgs/card-right-2.svg"
-          @click="()=>{this.downloadShow = 1}"
+          id="downloadCard"
         />
       </div>
     </section>
@@ -236,11 +236,17 @@
           <p>I see reflections in your eyes.</p>
           <div class="links">
             <a href="https://yancymin.design" target="_blank"><Site /></a>
-            <a href="https://dribbble.com/YancyMin" target="_blank"><Dribbble /></a>
-            <a href="https://twitter.com/yancymin" target="_blank"><Twitter /></a>
+            <a href="https://dribbble.com/YancyMin" target="_blank"
+              ><Dribbble
+            /></a>
+            <a href="https://twitter.com/yancymin" target="_blank"
+              ><Twitter
+            /></a>
             <a href="https://github.com/yancymin" target="_blank"><Github /></a>
             <a href="https://codepen.io/yancy/" target="_blank"><Codepen /></a>
-            <a href="https://www.instagram.com/yancymin/" target="_blank"><Instagram /></a>
+            <a href="https://www.instagram.com/yancymin/" target="_blank"
+              ><Instagram
+            /></a>
           </div>
         </div>
         <div class="infoCard">
@@ -302,7 +308,7 @@
       <circle cx="9" cy="9" r="9" fill="#F65C8A" />
     </svg>
     <FooterCom />
-    <Download :close="this.downloadShow"/>
+    <Download :downloadClose="this.downloadShow" />
   </div>
 </template>
 
@@ -362,9 +368,9 @@ export default {
           "持续的创造，全部开源",
           "为 Figma 贡献力量"
         ],
-        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`,
-        downloadShow: 0
-      }
+        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
+      },
+      downloadShow: 0
     }
   },
   methods: {
@@ -378,6 +384,10 @@ export default {
       if (scrollTop + 1100 >= item.offsetTop) {
         fun()
       }
+    },
+    downloadPage () {
+      document.body.scrollTop = 0
+      this.downloadShow = 1
     }
   },
   mounted () {
@@ -386,6 +396,7 @@ export default {
     const Section3Top = document.querySelector(".section-3")
     const Section4Top = document.querySelector(".section-4")
     const emojis = document.querySelectorAll(".emoji")
+    const downloadCard = document.querySelector("#downloadCard")
     Section1Top.classList.add("section-show")
 
     window.addEventListener("scroll", () => {
@@ -409,6 +420,11 @@ export default {
       })
     })
 
+    downloadCard.addEventListener("click", () => {
+      console.log("sss")
+      this.downloadShow = 1
+    })
+
     //  cursor ______________________________________
     const circle = document.querySelector(".cursor")
     const links = document.querySelectorAll("a")
@@ -417,7 +433,8 @@ export default {
 
     TweenMax.set(circle, {
       xPercent: -50,
-      yPercent: -50
+      yPercent: -50,
+      display: "none"
     })
 
     function moveCircle (e) {
@@ -537,7 +554,7 @@ export default {
       transition: all 0.3s ease;
 
       &:hover {
-        color: #B2B4C7;
+        color: #b2b4c7;
         &::after {
           opacity: 1;
           transform: scale(1);
@@ -555,8 +572,9 @@ export default {
         width: 100%;
         height: 100%;
         padding: 8px 8px 9px 8px;
-        background: #3E4373;
-        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(92, 99, 163, 0.7);
+        background: #3e4373;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25),
+          inset 0px 1px 1px rgba(92, 99, 163, 0.7);
         border-radius: 8px;
         transform: scale(0.96);
         transition: all 0.25s ease-out;
@@ -917,6 +935,7 @@ export default {
 }
 
 .cursor {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
