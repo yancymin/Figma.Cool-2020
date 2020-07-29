@@ -301,11 +301,12 @@
       <circle cx="9" cy="9" r="9" fill="#F65C8A" />
     </svg>
     <FooterCom />
+    <Download/>
   </div>
 </template>
 
 <script>
-import { TweenMax, Power2 } from "gsap"
+import { TweenMax } from "gsap"
 import ScrollText from "../assets/hero-scroll.svg"
 import Slogan from "../assets/hero-slogan.svg"
 import Logo from "../assets/hero-logo.svg"
@@ -313,6 +314,7 @@ import Title from "@/components/Title"
 import Card from "@/components/Card"
 import PluginCard from "@/components/PluginCard"
 import FooterCom from "@/components/FooterCom"
+import Download from "@/components/Download"
 import TitleIcon1 from "../assets/title-1.svg"
 import TitleIcon2 from "../assets/title-2.svg"
 import TitleIcon3 from "../assets/title-3.svg"
@@ -345,7 +347,8 @@ export default {
     Codepen,
     Instagram,
     Site,
-    FooterCom
+    FooterCom,
+    Download
   },
   data () {
     return {
@@ -419,8 +422,7 @@ export default {
       TweenMax.to(circle, {
         duration: 0.0001,
         x: e.clientX,
-        y: e.clientY,
-        ease: Power2.easeOut
+        y: e.clientY
       })
     }
 
@@ -487,11 +489,12 @@ export default {
 
       .ScrollText1,
       .ScrollText2 {
+        will-change: transform;
         animation: scrollText 15s linear infinite;
 
         @keyframes scrollText {
           to {
-            transform: translateX(-67.9%);
+            transform: translate3d(-67.9%, 0, 0);
           }
         }
       }
@@ -545,6 +548,8 @@ export default {
         position: absolute;
         content: "";
         display: block;
+        left: -7px;
+        top: -7px;
         width: 100%;
         height: 100%;
         padding: 8px 8px 9px 8px;
