@@ -508,7 +508,7 @@ export default {
       .ScrollText1,
       .ScrollText2 {
         will-change: transform;
-        animation: scrollText 15s linear infinite;
+        animation: scrollText 25s linear infinite;
 
         @keyframes scrollText {
           to {
