@@ -155,11 +155,7 @@
     </div>
     <i
       class="close"
-      @click="
-        () => {
-          this.downloadClose = 0;
-        }
-      "
+      @click="() => this.handleClose()"
     >
       <Close />
     </i>
@@ -189,8 +185,10 @@ export default {
     Close
   },
   props: ["downloadClose"],
-  mounted () {
-    console.log(this.downloadClose)
+  watch: {
+    downloadClose () {
+      window.scrollTo(0, 0)
+    }
   },
   data () {
     return {
@@ -202,6 +200,9 @@ export default {
     tabSwitch (e) {
       this.target1 = !this.target1
       this.target2 = !this.target2
+    },
+    handleClose () {
+      this.$emit("close")
     }
   }
 }
