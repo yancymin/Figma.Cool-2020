@@ -991,7 +991,7 @@ export default {
   ::v-deep .card {
      &:nth-of-type(1) {
          &:hover {
-          background: rgb(117, 114, 255);
+          background: rgb(104, 101, 247);
           color: #212642;
 
           h3, p{
@@ -1005,11 +1005,11 @@ export default {
      }
      &:nth-of-type(2) {
          &:hover {
-          background: #eba801;
-          color: #674b04;
+          background: #f65c8a;
+          color: #662337;
 
           h3, p{
-          color: #674b04;
+          color: #662337;
           }
 
           .des {
