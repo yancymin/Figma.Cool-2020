@@ -297,7 +297,7 @@
       <TitleIcon3 />
       <TitleIcon4 />
     </div>
-    <svg
+    <!-- <svg
       class="cursor"
       width="18"
       height="18"
@@ -306,7 +306,7 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle cx="9" cy="9" r="9" fill="#F65C8A" />
-    </svg>
+    </svg> -->
     <FooterCom />
     <Download :downloadClose="this.downloadShow" />
   </div>
@@ -911,7 +911,7 @@ export default {
 
 .logo-motion {
   will-change: transform;
-  animation: moving 14s infinite ease-out both;
+  animation: moving 30s infinite ease-out both;
 
   &:nth-of-type(1) {
     transform-origin: left top;
