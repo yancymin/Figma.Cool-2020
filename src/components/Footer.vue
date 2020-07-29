@@ -1,4 +1,0 @@
-<template>
-    <Footer>
-    </Footer>
-</template>

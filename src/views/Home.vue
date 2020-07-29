@@ -300,6 +300,7 @@
     >
       <circle cx="9" cy="9" r="9" fill="#F65C8A" />
     </svg>
+    <FooterCom />
   </div>
 </template>
 
@@ -311,6 +312,7 @@ import Logo from "../assets/hero-logo.svg"
 import Title from "@/components/Title"
 import Card from "@/components/Card"
 import PluginCard from "@/components/PluginCard"
+import FooterCom from "@/components/FooterCom"
 import TitleIcon1 from "../assets/title-1.svg"
 import TitleIcon2 from "../assets/title-2.svg"
 import TitleIcon3 from "../assets/title-3.svg"
@@ -342,7 +344,8 @@ export default {
     Twitter,
     Codepen,
     Instagram,
-    Site
+    Site,
+    FooterCom
   },
   data () {
     return {
@@ -922,6 +925,6 @@ export default {
 
 .section-show {
   opacity: 1 !important;
-  transform: perspective(1000px) rotateX(0) translateY(0%) !important;
+  transform: perspective(0) rotateX(0) translateY(0%) !important;
 }
 </style>
