@@ -5,16 +5,16 @@
       <a href="">
         <Wechat />
       </a>
-      <a href="">
+      <a href="https://twitter.com/FigmaCool" target="_blank">
         <Twitter />
       </a>
-      <a href="">
+      <a href="https://www.weibo.com/315838885" target="_blank">
         <Weibo />
       </a>
-      <a href="">
+      <a href="https://www.zhihu.com/people/figma-cool" target="_blank">
         <Zhihu />
       </a>
-      <a href="">
+      <a href="https://github.com/Figma-Cool" target="_blank">
         <Github />
       </a>
     </div>
@@ -65,6 +65,39 @@ footer {
     margin-top: var(--mg-4);
     a {
       margin: 0 10px;
+
+      &:first-child {
+        position: relative;
+
+        &:hover {
+           &::after {
+             visibility: visible;
+              transform: perspective(500px) rotateX(0);
+           }
+        }
+
+        &::after {
+          visibility: hidden;
+          position: absolute;
+          left: -48px;
+          top: -132px;
+          content: '';
+          display: block;
+          padding: 8px;
+          width: 100px;
+          height: 100px;
+          background: url('../assets/qr.png') no-repeat center;
+          background-size: cover;
+          border-radius: 4px;
+          background-size: 94%;
+          border-radius: 4px;
+          background-color: var(--color-black-2);
+          transition: all 0.2s ease-out;
+          transform-origin: bottom;
+          transform: perspective(500px) rotateX(10deg) scale(0.96);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+      }
     }
 
     margin-bottom: 16px;

@@ -1,6 +1,4 @@
-(function () {
-    'use strict';
-  
+(function () {  
     // braille
   
     const enc = x => (x&0x08)<<3 | (x&0x70)>>1 | (x&0x87) | 0x2800;

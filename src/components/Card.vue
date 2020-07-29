@@ -43,6 +43,7 @@ export default {
 
   .logo {
     margin-bottom: 32px;
+    margin-left: -8px;
   }
 
   .title {

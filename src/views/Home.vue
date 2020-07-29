@@ -187,7 +187,7 @@
             title="Chinese Font Picker"
             info="中文字体选择器"
             des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
-            imgSrc="imgs/plugin-icon-1.svg"
+            imgSrc="imgs/Plugin-icon-1.svg"
             rightSrc="imgs/plugin-1.png"
             href="https://www.figma.com/community/plugin/851126455550003999/Chinese-Font-Picker"
           />
@@ -195,7 +195,7 @@
             title="Same Text Generator"
             info="一键替换多个相同文本"
             des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
-            imgSrc="imgs/plugin-icon-3.svg"
+            imgSrc="imgs/Plugin-icon-3.svg"
             rightSrc="imgs/plugin-3.png"
             href="https://www.figma.com/community/plugin/863748474013054025/Same-Text-Generator"
           />
@@ -205,7 +205,7 @@
             title="Chinese User Data Generator"
             info="中文用户数据生成器"
             des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
-            imgSrc="imgs/plugin-icon-2.svg"
+            imgSrc="imgs/Plugin-icon-2.svg"
             rightSrc="imgs/plugin-2.png"
             href="https://www.figma.com/community/plugin/864052338727969891/Chinese-User-Data-Generator"
           />
@@ -213,7 +213,7 @@
             title="Unlocker"
             info="锁定图层快速定位解锁"
             des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
-            imgSrc="imgs/plugin-icon-4.svg"
+            imgSrc="imgs/Plugin-icon-4.svg"
             rightSrc="imgs/plugin-4.png"
             href="https://www.figma.com/community/plugin/862912103841000337/Unlocker"
           />
@@ -234,12 +234,12 @@
           <h1>Yancy Min</h1>
           <p>I see reflections in your eyes.</p>
           <div class="links">
-            <a href=""><Site /></a>
-            <a href=""><Dribbble /></a>
-            <a href=""><Twitter /></a>
-            <a href=""><Github /></a>
-            <a href=""><Codepen /></a>
-            <a href=""><Instagram /></a>
+            <a href="https://yancymin.design" target="_blank"><Site /></a>
+            <a href="https://dribbble.com/YancyMin" target="_blank"><Dribbble /></a>
+            <a href="https://twitter.com/yancymin" target="_blank"><Twitter /></a>
+            <a href="https://github.com/yancymin" target="_blank"><Github /></a>
+            <a href="https://codepen.io/yancy/" target="_blank"><Codepen /></a>
+            <a href="https://www.instagram.com/yancymin/" target="_blank"><Instagram /></a>
           </div>
         </div>
         <div class="infoCard">
@@ -247,8 +247,8 @@
           <h1>Coiven</h1>
           <p>I see reflections in your eyes.</p>
           <div class="links">
-            <a href=""><Twitter /></a>
-            <a href=""><Github /></a>
+            <a href="" target="_blank"><Twitter /></a>
+            <a href="" target="_blank"><Github /></a>
           </div>
         </div>
       </div>
@@ -381,11 +381,11 @@ export default {
     const Section3Top = document.querySelector(".section-3")
     const Section4Top = document.querySelector(".section-4")
     const emojis = document.querySelectorAll(".emoji")
+    Section1Top.classList.add("section-show")
 
     window.addEventListener("scroll", () => {
-      this.scrollTo(Section1Top, () => {
-        Section1Top.classList.add("section-show")
-      })
+      // this.scrollTo(Section1Top, () => {
+      // })
       this.scrollTo(Section2Top, () => {
         Section2Top.classList.add("section-show")
       })
@@ -418,7 +418,6 @@ export default {
     function moveCircle (e) {
       TweenMax.to(circle, {
         duration: 0.0001,
-        opacity: 1,
         x: e.clientX,
         y: e.clientY,
         ease: Power2.easeOut
@@ -530,6 +529,7 @@ export default {
       line-height: 16px;
       margin: 0 40px 0 0;
       padding: 2px;
+      transition: all 0.3s ease;
 
       &:hover {
         color: #B2B4C7;
@@ -910,7 +910,6 @@ export default {
 }
 
 .cursor {
-  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
