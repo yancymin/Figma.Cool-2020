@@ -167,7 +167,7 @@
           <Card
             title="Figma.Cool"
             info="资源、插件推荐、教程文章"
-            des="Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的Figma 共享平台。"
+            des="Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的 Figma 共享平台。"
             imgSrc="/imgs/card-logo-1.svg"
             bgColor="background: var(--color-red-1)"
             rightSrc="/imgs/card-right-1.svg"

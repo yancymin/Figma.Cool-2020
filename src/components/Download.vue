@@ -605,5 +605,6 @@ export default {
 
 .downloadShow {
   visibility: visible;
+  height: 100vh;
 }
 </style>
