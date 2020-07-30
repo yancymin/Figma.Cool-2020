@@ -3,7 +3,7 @@
     <Title title="FigmaCN" des="Figma 客户端汉化补丁、 Chrome 插件">
       <CNLogo />
     </Title>
-    <p>
+    <p class="des">
       现在，你可以使用客户端汉化补丁和 Chrome 浏览器插件来使 Figma
       支持中文界面。
     </p>

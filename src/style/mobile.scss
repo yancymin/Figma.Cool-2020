@@ -9,7 +9,7 @@
   .braille {
     top: -48%;
     transform: scale3d(0.8, 0.8, 0.8);
-    left: -10%;
+    left: -17%;
   }
 
   .braille > * {
@@ -39,10 +39,6 @@
     transform: scale(0.42) !important;
     left: -236% !important;
     flex-direction: column;
-  }
-
-  .ScrollWrap svg {
-    animation: none !important;
   }
 
   .ScrollWrap svg:last-child {
@@ -79,6 +75,8 @@
   .story {
     width: 100vw;
     padding: 0 32px;
+    font-size: 18px !important;
+    line-height: 28px !important;
   }
 
   .download .pics {
@@ -118,5 +116,26 @@
 
   .contributor {
     margin-top: 200px !important;
+  }
+
+  .download .des {
+    width: 100vw !important;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .braille {
+    top: -48%;
+    transform: scale3d(0.8, 0.8, 0.8);
+    left: -28%;
+  }
+
+  nav a {
+    margin: 0 20px 0 0 !important;
+  }
+
+  nav a:last-child {
+    margin: 0 !important;
   }
 }
