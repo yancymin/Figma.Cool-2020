@@ -34,6 +34,8 @@ export default {
         border: 2px solid var(--color-blue-1);
         border-radius: 6px;
         margin-top: 48px;
+        font-family: source-han-sans-simplified-c, sans-serif;
+        font-weight: 300;
     }
 }
 

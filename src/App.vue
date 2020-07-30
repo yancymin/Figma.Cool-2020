@@ -17,6 +17,7 @@ export default {
 
 #app {
   font-family: source-han-sans-simplified-c, sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

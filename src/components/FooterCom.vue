@@ -70,11 +70,11 @@ footer {
         position: relative;
 
         &:hover {
-           &::after {
-             opacity: 1;
-             visibility: visible;
-              transform: perspective(500px) rotateX(0);
-           }
+          &::after {
+            opacity: 1;
+            visibility: visible;
+            transform: perspective(500px) rotateX(0);
+          }
         }
 
         &::after {
@@ -83,12 +83,12 @@ footer {
           position: absolute;
           left: -48px;
           top: -132px;
-          content: '';
+          content: "";
           display: block;
           padding: 8px;
           width: 100px;
           height: 100px;
-          background: url('../assets/qr.png') no-repeat center;
+          background: url("../assets/qr.png") no-repeat center;
           background-size: cover;
           border-radius: 4px;
           background-size: 94%;
@@ -103,6 +103,16 @@ footer {
     }
 
     margin-bottom: 16px;
+  }
+
+  svg path {
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    svg path {
+      fill: #8690eb;
+    }
   }
 
   span {

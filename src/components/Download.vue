@@ -271,6 +271,7 @@ export default {
           margin: 0 40px 0 0;
           padding: 2px;
           transition: all 0.3s ease;
+          cursor: pointer;
 
           &:hover {
             color: #b2b4c7;

@@ -42,6 +42,16 @@ export default {
     }
   }
 
+    h3 {
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 500;
+  }
+
+  p {
+        font-family: source-han-sans-simplified-c, sans-serif;
+        font-weight: 300;
+  }
+
   .logo {
     margin-bottom: 32px;
     margin-left: -8px;

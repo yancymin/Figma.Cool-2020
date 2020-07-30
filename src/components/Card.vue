@@ -30,6 +30,16 @@ export default {
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
+  h3 {
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 500;
+  }
+
+  p {
+        font-family: source-han-sans-simplified-c, sans-serif;
+        font-weight: 300;
+  }
+
   &:hover {
 
     .right {
