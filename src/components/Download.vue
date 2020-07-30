@@ -213,6 +213,7 @@ export default {
   visibility: hidden;
   z-index: 99999;
   position: absolute;
+  width: 100vw;
   top: 0;
   left: 0;
   display: flex;
@@ -221,6 +222,7 @@ export default {
   padding-top: var(--mg-2);
   cursor: default !important;
   background-color: var(--color-black-2);
+  overflow-x: hidden;
 
   p {
     width: 520px;

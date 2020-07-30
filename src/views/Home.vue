@@ -3,6 +3,7 @@
     <div class="area" :style="{display: this.downloadShow ? 'none' : ''}">
       <div class="hero">
         <svg
+          id="for-figma"
           width="845"
           height="173"
           viewBox="0 0 845 173"
@@ -141,7 +142,11 @@
           <ScrollText class="ScrollText1" />
           <ScrollText class="ScrollText2" />
         </div>
-        <Slogan class="Slogan" />
+       <div class="Slogan">
+         我们热爱 Figma<br/>
+         和它自由开放的观念<br/>
+         那就，贡献与创造
+       </div>
       </div>
       <nav>
         <Logo class="Logo" />
@@ -317,7 +322,7 @@
 <script>
 // import { TweenMax } from "gsap"
 import ScrollText from "../assets/hero-scroll.svg"
-import Slogan from "../assets/hero-slogan.svg"
+// import Slogan from "../assets/hero-slogan.svg"
 import Logo from "../assets/hero-logo.svg"
 import Title from "@/components/Title"
 import Card from "@/components/Card"
@@ -340,7 +345,7 @@ export default {
   name: "Home",
   components: {
     ScrollText,
-    Slogan,
+    // Slogan,
     Logo,
     Title,
     TitleIcon1,
@@ -484,6 +489,7 @@ export default {
 
   .area {
     width: 100%;
+    height: 100vh;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -523,7 +529,14 @@ export default {
     }
 
     .Slogan {
+      width: 50%;
+      text-align: right;
       margin-top: 120px;
+      font-size: 64px;
+      line-height: 80px;
+      font-weight: 700;
+      color: #3E4373;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6),  0 -1px 1px rgba(255, 255, 255, 0.24);
     }
   }
   nav {
@@ -598,6 +611,7 @@ export default {
     transition: all 0.6s ease-out;
     transform: perspective(1000px) rotateX(20deg) translateY(2%);
     transform-origin: top;
+    background: var(--color-black-2);
   }
 
   .section-1 {

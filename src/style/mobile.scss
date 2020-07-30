@@ -1,0 +1,82 @@
+@media screen and (max-width: 750px) {
+  :root {
+    --mg-1: 120px;
+    --mg-2: 140px;
+    --mg-3: 120px;
+    --mg-4: 60px;
+  }
+
+  .braille {
+    top: 0;
+    transform: scale3d(0.8, 0.8, 0.8);
+    left: -10%;
+  }
+
+  .braille > * {
+    width: 100vw;
+  }
+
+  .hero {
+    padding: 80px 32px 0 32px !important;
+  }
+
+  #for-figma {
+    width: 85vw;
+  }
+
+  .Slogan {
+    text-align: left !important;
+    width: 100vw !important;
+    font-size: 36px !important;
+    line-height: 52px !important;
+    margin-top: 20px !important;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+      0 -1px 1px rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .ScrollWrap {
+    top: 150px !important;
+    transform: scale(0.42) !important;
+    left: -236% !important;
+  }
+
+  .ScrollWrap svg {
+    animation: none !important;
+  }
+
+  .ScrollWrap svg:last-child {
+    display: none;
+  }
+
+  .Logo {
+    transform: scale(0.8);
+    margin: var(--mg-4) 0 !important;
+  }
+
+  section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .cardWrap {
+    flex-direction: column;
+    padding: 0 32px;
+    align-items: center;
+  }
+  .left,
+  .right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .story {
+    width: 100vw;
+    padding: 0 32px;
+  }
+}

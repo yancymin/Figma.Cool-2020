@@ -31,7 +31,6 @@ export default {
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &:hover {
-    transform: scale(0.975);
 
     .right {
       transform: scale(1.15);
@@ -39,7 +38,7 @@ export default {
   }
 
   & > * {
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .logo {
@@ -74,5 +73,12 @@ export default {
     right: -18px;
     transform-origin: right;
   }
+}
+
+@media screen and (max-width: 750px) {
+    .card {
+        width: 100%;
+        max-width: 100% !important;
+    }
 }
 </style>

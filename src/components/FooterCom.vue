@@ -71,12 +71,14 @@ footer {
 
         &:hover {
            &::after {
+             opacity: 1;
              visibility: visible;
               transform: perspective(500px) rotateX(0);
            }
         }
 
         &::after {
+          opacity: 0;
           visibility: hidden;
           position: absolute;
           left: -48px;

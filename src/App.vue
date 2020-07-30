@@ -13,6 +13,7 @@ export default {
 <style lang="scss">
 @import url("./style/reset.css");
 @import url("./style/global.scss");
+@import url("./style/mobile.scss");
 
 #app {
   font-family: source-han-sans-simplified-c, sans-serif;

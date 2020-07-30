@@ -32,11 +32,11 @@ export default {
   color: white;
   cursor: pointer;
   background: #3e4373;
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.3s ease;
   overflow: hidden;
 
   &:hover {
-    transform: scale3d(0.97, 0.97, 0.97);
+    /* transform: scale3d(0.97, 0.97, 0.97); */
 
     .right {
       transform: scale3d(0.9, 0.9, 0.9) perspective(630px) rotateY(-20deg) rotateZ(2deg);
@@ -54,6 +54,7 @@ export default {
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 8px;
+    transition: all 0.2s ease;
   }
 
   .info {
@@ -62,6 +63,7 @@ export default {
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 32px;
+    transition: all 0.2s ease;
   }
 
   .des {
@@ -70,12 +72,25 @@ export default {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+    transition: all 0.2s ease;
   }
 
   .right {
     width: 100%;
     max-width: 207px;
+    will-change: transform;
     transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
+}
+
+@media screen and (max-width: 750px) {
+    .card {
+        width: 100%;
+        max-width: 100% !important;
+
+        .right {
+          display: none;
+        }
+    }
 }
 </style>

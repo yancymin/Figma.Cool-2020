@@ -21,9 +21,8 @@ export default {
         font-weight: 700;
         font-size: 88px;
         line-height: 88px;
-        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         margin-top: 48px;
-        filter: drop-shadow(0px -1px 0 #6D73A6);
+        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6),  0 -1px 1px rgba(255, 255, 255, 0.45);
         margin-bottom: 56px;
     }
 
@@ -35,6 +34,16 @@ export default {
         border: 2px solid var(--color-blue-1);
         border-radius: 6px;
         margin-top: 48px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .title {
+        transform: scale(0.8);
+        h1 {
+            font-size: 56px;
+            line-height: 56px;
+        }
     }
 }
 </style>
