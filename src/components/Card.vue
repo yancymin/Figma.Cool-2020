@@ -80,5 +80,9 @@ export default {
         width: 100%;
         max-width: 100% !important;
     }
+
+    .right {
+        display: none;
+    }
 }
 </style>

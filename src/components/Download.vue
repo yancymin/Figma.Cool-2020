@@ -144,7 +144,7 @@
         </div>
       </div>
     </div>
-    <FooterCom />
+    <!-- <FooterCom /> -->
     <div class="HIDDEN">
       <CNLogo />
       <Icon1 />
@@ -164,7 +164,7 @@
 
 <script>
 import Title from "@/components/Title"
-import FooterCom from "@/components/FooterCom"
+// import FooterCom from "@/components/FooterCom"
 import CNLogo from "../assets/download-logo.svg"
 import Icon1 from "../assets/download-icon-1.svg"
 import Arrow from "../assets/download-icon-arrow.svg"
@@ -179,7 +179,7 @@ export default {
     CNLogo,
     Icon1,
     Arrow,
-    FooterCom,
+    // FooterCom,
     Windows,
     Apple,
     Close

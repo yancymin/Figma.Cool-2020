@@ -31,13 +31,14 @@
     line-height: 52px !important;
     margin-top: 20px !important;
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-      0 -1px 1px rgba(255, 255, 255, 0.15) !important;
+      0 -1px 0 rgba(255, 255, 255, 0.1) !important;
   }
 
   .ScrollWrap {
     top: 150px !important;
     transform: scale(0.42) !important;
     left: -236% !important;
+    flex-direction: column;
   }
 
   .ScrollWrap svg {
@@ -50,7 +51,7 @@
 
   .Logo {
     transform: scale(0.8);
-    margin: var(--mg-4) 0 !important;
+    margin: var(--mg-3) 0 !important;
   }
 
   section {
@@ -78,5 +79,44 @@
   .story {
     width: 100vw;
     padding: 0 32px;
+  }
+
+  .download .pics {
+    border: 2px solid #3e4373 !important;
+    width: 90vw !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+  }
+
+  .download .pics img {
+    border-radius: 6px !important;
+  }
+
+  .download .guide .content .client, .download .guide .content .chrome {
+    flex-direction: column !important;
+    padding: 20px;
+    align-items: center !important;
+  }
+
+  .guide .right {
+    margin-top: 80px;
+    padding: 20px !important;
+  }
+
+  .guide .right h3 {
+    font-size: 32px !important;
+    line-height: auto !important;
+  }
+
+  .infoCard {
+    margin-bottom: 32px;
+  }
+
+  .contributor .cardWrap {
+    flex-direction: row !important;
+  }
+
+  .contributor {
+    margin-top: 200px !important;
   }
 }
