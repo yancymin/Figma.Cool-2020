@@ -222,7 +222,7 @@ export default {
   padding-top: var(--mg-2);
   cursor: default !important;
   background-color: var(--color-black-2);
-  overflow-x: hidden;
+  overflow: hidden;
 
   p {
     width: 520px;
@@ -605,6 +605,5 @@ export default {
 
 .downloadShow {
   visibility: visible;
-  height: 100vh;
 }
 </style>
