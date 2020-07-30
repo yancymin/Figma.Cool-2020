@@ -260,7 +260,6 @@
             <h1>Coiven</h1>
             <p>I see reflections in your eyes.</p>
             <div class="links">
-              <a href="" target="_blank"><Twitter /></a>
               <a href="https://github.com/Coiven" target="_blank"><Github /></a>
             </div>
           </div>

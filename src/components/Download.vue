@@ -60,16 +60,13 @@
             <h3>Windows 安装指南</h3>
             <ul>
               <li>
-                下载 app.asar 文件，在
-                （访达）中进入<strong>「应用程序」</strong>文件夹；
+                找到 Figma 安装文件夹（可在开始菜单下找到 Figma，右键-更多-打开文件夹位置。进入相应文件夹后，右键 Figma 图标，选择「打开文件所在的位置」）；
               </li>
               <li>
-                在「应用程序」中，找到
-                Figma，右键选择<strong>「显示包内容」</strong>进入；
+                打开 <strong>app-**.*.*</strong> 文件夹（*代表数字，选择和补丁对应的版本号） ；
               </li>
               <li>
-                把 app.asar 文件放入 <strong>Contents/Resources</strong>，重启
-                Figma 。
+                把 app.asar 文件放入<strong> resources</strong>，重启 Figma 。
               </li>
             </ul>
             <h3>Q&A</h3>
@@ -321,6 +318,7 @@ export default {
         max-width: 1180px;
 
         .left {
+          position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -331,6 +329,18 @@ export default {
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
           border-radius: 32px;
           cursor: pointer;
+
+          &::before {
+              content: "Figma 版本号：86.5.0";
+              position: absolute;
+              bottom: -40px;
+              padding: 8px;
+              font-size: 14px;
+              line-height: 14px;
+              font-family: source-han-sans-simplified-c, sans-serif;
+              font-weight: 300;
+              cursor: default;
+          }
 
           .links {
             position: relative;
