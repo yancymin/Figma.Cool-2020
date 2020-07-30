@@ -310,7 +310,7 @@ export default {
       width: 100vw;
       max-width: 1180px;
       height: 1200px;
-      margin-top: var(--mg-3);
+      margin: var(--mg-3) 0;
 
       .client {
         position: absolute;
