@@ -32,7 +32,6 @@ export default {
   color: white;
   cursor: pointer;
   background: #3e4373;
-  transition: all 0.3s ease;
   overflow: hidden;
 
   &:hover {
@@ -54,7 +53,6 @@ export default {
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 8px;
-    transition: all 0.2s ease;
   }
 
   .info {
@@ -63,16 +61,14 @@ export default {
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 32px;
-    transition: all 0.2s ease;
   }
 
   .des {
     opacity: 0.7;
-    max-width: 300px;
+    max-width: 280px;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-    transition: all 0.2s ease;
   }
 
   .right {

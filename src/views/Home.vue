@@ -200,8 +200,8 @@
             />
             <PluginCard
               title="Same Text Generator"
-              info="一键替换多个相同文本"
-              des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+              info="相同文本生成器"
+              des="多个文本图层一键填充成相同文本。"
               imgSrc="imgs/Plugin-icon-3.svg"
               rightSrc="imgs/plugin-3.png"
               href="https://www.figma.com/community/plugin/863748474013054025/Same-Text-Generator"
@@ -211,7 +211,7 @@
             <PluginCard
               title="Chinese User Data Generator"
               info="中文用户数据生成器"
-              des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+              des="随机生成用户数据，快速批量填充。"
               imgSrc="imgs/Plugin-icon-2.svg"
               rightSrc="imgs/plugin-2.png"
               href="https://www.figma.com/community/plugin/864052338727969891/Chinese-User-Data-Generator"
@@ -219,7 +219,7 @@
             <PluginCard
               title="Unlocker"
               info="锁定图层快速定位解锁"
-              des="现在你可以在 Figma 里使用中文字体选择器选择和预览系统中已安装的中文字体。"
+              des="方便地管理全部被锁定的图层，通过图标直观显示图层属性。"
               imgSrc="imgs/Plugin-icon-4.svg"
               rightSrc="imgs/plugin-4.png"
               href="https://www.figma.com/community/plugin/862912103841000337/Unlocker"
@@ -261,7 +261,7 @@
             <p>I see reflections in your eyes.</p>
             <div class="links">
               <a href="" target="_blank"><Twitter /></a>
-              <a href="" target="_blank"><Github /></a>
+              <a href="https://github.com/Coiven" target="_blank"><Github /></a>
             </div>
           </div>
         </div>
@@ -272,15 +272,15 @@
         </Title>
         <div class="contributor">
           <div class="cardWrap">
-            <div class="card">
+            <a class="card" href="https://twitter.com/pluwen" target="_blank">
               <img src="../assets/avatar-3.png" alt="" />
               <p class="name">Pluwen</p>
-            </div>
-            <div class="card">
+            </a>
+            <a class="card" href="" target="_blank">
               <img src="../assets/avatar-4.png" alt="" />
               <p class="name">Neko</p>
-            </div>
-            <a class="card">
+            </a>
+            <a class="card" href="mailto:figmacool@gmail.com" target="_blank">
               <img src="/imgs/add.svg" alt="add" />
               <p class="name">加入我们</p>
             </a>
@@ -372,7 +372,7 @@ export default {
         des: [
           "为中文母语使用者提供便捷",
           "持续的创造，全部开源",
-          "持续的创造，全部开源",
+          "大家都爱 Figma",
           "为 Figma 贡献力量"
         ],
         story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 正在改变游戏规则。
@@ -681,7 +681,7 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
       margin-top: var(--mg-3);
       text-align: left;
       margin-bottom: var(--mg-3);
-      white-space: pre-wrap;
+      white-space: pre-line;
     }
 
     .cardWrap {
@@ -988,10 +988,10 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
      &:nth-of-type(1) {
          &:hover {
           background: #09b5ff;
-          color: #01445f;
+          color: white;
 
           h3, p{
-          color: #01445f;
+          color: white;
           }
 
           .des {
@@ -1002,10 +1002,10 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
      &:nth-of-type(2) {
          &:hover {
           background: #eba801;
-          color: #674b04;
+          color: white;
 
           h3, p{
-          color: #674b04;
+          color: white;
           }
 
           .des {
@@ -1019,11 +1019,11 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
   ::v-deep .card {
      &:nth-of-type(1) {
          &:hover {
-          background: rgb(104, 101, 247);
-          color: #212642;
+          background: #5e5bf6;
+          color: white;
 
           h3, p{
-          color: #212642;
+          color: white;
           }
 
           .des {
@@ -1034,10 +1034,10 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
      &:nth-of-type(2) {
          &:hover {
           background: #f65c8a;
-          color: #662337;
+          color: white;
 
           h3, p{
-          color: #662337;
+          color: white;
           }
 
           .des {
