@@ -43,6 +43,7 @@ export default {
         h1 {
             font-size: 56px;
             line-height: 56px;
+            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4),  0 -1px 1px rgba(255, 255, 255, 0.15);
         }
     }
 }
