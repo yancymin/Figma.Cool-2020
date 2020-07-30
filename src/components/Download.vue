@@ -344,7 +344,7 @@ export default {
 
           .links {
             position: relative;
-            bottom: -6px;
+            bottom: -20px;
             display: flex;
             z-index: 9;
             width: 90%;
