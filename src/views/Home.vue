@@ -280,10 +280,10 @@
               <img src="../assets/avatar-4.png" alt="" />
               <p class="name">Neko</p>
             </div>
-            <div class="card">
+            <a class="card">
               <img src="/imgs/add.svg" alt="add" />
               <p class="name">加入我们</p>
-            </div>
+            </a>
           </div>
           <div class="bg">
             <img
@@ -375,7 +375,11 @@ export default {
           "持续的创造，全部开源",
           "为 Figma 贡献力量"
         ],
-        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 改变了游戏规则。所以我和 Coiven 意识到应该加入这场革命，能够做一些贡献和创造。我们的创造便是 Figma.Cool，Figma.Cool 聚集了众多创意设计师贡献出的不断增长的设计资源，涵盖了 UX / UI 并且完全免费开放使用。当然还有 Figma 插件推荐和使用教程，无论你是 Figma 的初学者还是高级设计师都能各取所需。我们非常感谢资源的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
+        story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 正在改变游戏规则。
+
+Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创造。我们的创造便是 Figma.Cool。Figma.Cool 是一个致力于在国内推广 Figma 的组织，这里有 Figma 汉化补丁、众多优质设计资源、Figma 插件推荐和我们开发的提高设计效率的插件。当然，也可以加入我们的社群，一起讨论和追踪关于 Figma 的一切，我们一直都在。
+
+我们非常感谢参与贡献力量的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
       },
       downloadShow: 0
     }
@@ -677,6 +681,7 @@ export default {
       margin-top: var(--mg-3);
       text-align: left;
       margin-bottom: var(--mg-3);
+      white-space: pre-wrap;
     }
 
     .cardWrap {
@@ -740,6 +745,16 @@ export default {
 
         a {
           margin: 0 16px;
+
+          svg path {
+            transition: all 0.3s ease;
+          }
+
+          &:hover {
+            svg path {
+              fill: #8690eb;
+            }
+          }
         }
       }
     }
