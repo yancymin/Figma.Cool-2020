@@ -608,7 +608,7 @@ export default {
   section {
     opacity: 0;
     transition: all 0.6s ease-out;
-    transform: perspective(1000px) rotateX(20deg) translateY(2%);
+    transform: perspective(1000px) rotateX(-5deg) translateY(0%);
     transform-origin: top;
     background: var(--color-black-2);
   }
