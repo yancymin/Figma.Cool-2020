@@ -43,13 +43,13 @@ export default {
   }
 
     h3 {
-    font-family: source-han-sans-simplified-c, sans-serif;
+    font-family: 'Noto Sans SC', sans-serif;
     font-weight: 500;
   }
 
   p {
-        font-family: source-han-sans-simplified-c, sans-serif;
-        font-weight: 300;
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: 400;
   }
 
   .logo {
@@ -67,7 +67,7 @@ export default {
 
   .info {
     color: #d8d9e3;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 32px;
@@ -76,7 +76,7 @@ export default {
   .des {
     opacity: 0.7;
     max-width: 280px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     line-height: 20px;
   }

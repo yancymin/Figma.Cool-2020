@@ -16,8 +16,8 @@ export default {
 @import url("./style/mobile.scss");
 
 #app {
-  font-family: source-han-sans-simplified-c, sans-serif;
-  font-weight: 300;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

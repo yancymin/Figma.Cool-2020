@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
 :root {
   --color-black-1: #212121;
   --color-black-2: #292929;
@@ -63,8 +65,8 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  font-family: source-han-sans-simplified-c, sans-serif;
-  font-weight: 300;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 400;
   background: var(--color-black-2);
   overflow-x: hidden;
   color: var(--color-blue-2);

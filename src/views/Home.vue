@@ -739,7 +739,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
 
       p {
         margin-left: 24px;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 16px;
         line-height: 16px;
         margin-bottom: 64px;
