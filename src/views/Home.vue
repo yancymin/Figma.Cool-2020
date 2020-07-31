@@ -268,7 +268,7 @@
           <div class="infoCard">
             <img src="../assets/avatar-2.png" alt="avatar" class="avatar" />
             <h1>Coiven</h1>
-            <p>”不务正业“ 的小透明前端 🧑‍💻</p>
+            <p>"不务正业" 的小透明前端 🧑‍💻</p>
             <div class="links">
               <a href="https://github.com/Coiven" target="_blank"><Github /></a>
               <a href="https://www.instagram.com/coiven.zary/" target="_blank"><Instagram/></a>
