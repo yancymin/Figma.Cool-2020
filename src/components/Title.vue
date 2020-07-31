@@ -17,7 +17,7 @@ export default {
 .title {
     text-align: center;
     h1 {
-        font-family: source-han-sans-simplified-c, sans-serif;
+        font-family: 'Noto Sans SC', sans-serif;
         font-weight: 700;
         font-size: 88px;
         line-height: 88px;
@@ -34,8 +34,8 @@ export default {
         border: 2px solid var(--color-blue-1);
         border-radius: 6px;
         margin-top: 48px;
-        font-family: source-han-sans-simplified-c, sans-serif;
-        font-weight: 300;
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: 400;
     }
 }
 

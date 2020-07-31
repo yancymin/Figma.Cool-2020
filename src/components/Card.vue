@@ -31,13 +31,13 @@ export default {
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   h3 {
-    font-family: source-han-sans-simplified-c, sans-serif;
+    font-family: 'Noto Sans SC', sans-serif;
     font-weight: 500;
   }
 
   p {
-        font-family: source-han-sans-simplified-c, sans-serif;
-        font-weight: 300;
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: 400;
   }
 
   &:hover {
@@ -63,7 +63,7 @@ export default {
   }
 
   .info {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 32px;
@@ -72,7 +72,7 @@ export default {
   .des {
     opacity: 0.7;
     max-width: 423px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     line-height: 20px;
   }

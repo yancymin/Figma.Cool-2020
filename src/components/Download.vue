@@ -223,7 +223,7 @@ export default {
 
   p {
     width: 520px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     text-align: center;
@@ -337,8 +337,8 @@ export default {
               padding: 8px;
               font-size: 14px;
               line-height: 14px;
-              font-family: source-han-sans-simplified-c, sans-serif;
-              font-weight: 300;
+              font-family: 'Noto Sans SC', sans-serif;
+              font-weight: 400;
               cursor: default;
           }
 
@@ -411,7 +411,7 @@ export default {
           p {
             font-size: 20px;
             line-height: 30px;
-            font-weight: 300;
+            font-weight: 400;
           }
 
           p {
@@ -530,7 +530,7 @@ export default {
           p {
             font-size: 20px;
             line-height: 30px;
-            font-weight: 300;
+            font-weight: 400;
           }
 
           p {
