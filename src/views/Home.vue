@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="area" :style="{display: this.downloadShow ? 'none' : ''}">
+    <div class="area" :style="{ display: this.downloadShow ? 'none' : '' }">
       <div class="hero">
         <svg
           id="for-figma"
@@ -43,7 +43,7 @@
             fill="#F65C8A"
           />
           <mask
-            id="mask0"
+            id="mask0acdv44"
             mask-type="alpha"
             maskUnits="userSpaceOnUse"
             x="0"
@@ -84,14 +84,14 @@
               fill="#F65C8A"
             />
           </mask>
-          <g mask="url(#mask0)">
-            <g filter="url(#filter0_f)" class="logo-motion">
+          <g mask="url(#mask0acdv44)">
+            <g filter="url(#filter0_fas24)" class="logo-motion">
               <path
                 d="M338 -234.5C338 -17.7283 162.496 158 -54 158C-270.496 158 -331 114.772 -331 -102C-331 -318.772 -319.996 -424 -103.5 -424C86 -327 338 -451.272 338 -234.5Z"
                 fill="#5F5CF6"
               />
             </g>
-            <g filter="url(#filter1_f)" class="logo-motion">
+            <g filter="url(#filter1_f123cvf)" class="logo-motion">
               <path
                 d="M912.5 -127C912.5 16.8702 823.955 149 647.5 149C471.045 149 328 32.3702 328 -111.5C328 -255.37 455 -111.5 647.5 -271C823.955 -271 912.5 -270.87 912.5 -127Z"
                 fill="#00B5FF"
@@ -100,7 +100,7 @@
           </g>
           <defs>
             <filter
-              id="filter0_f"
+              id="filter0_fas24"
               x="-411"
               y="-504"
               width="829"
@@ -115,10 +115,13 @@
                 in2="BackgroundImageFix"
                 result="shape"
               />
-              <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur" />
+              <feGaussianBlur
+                stdDeviation="40"
+                result="effect1_foregroundBlur"
+              />
             </filter>
             <filter
-              id="filter1_f"
+              id="filter1_f123cvf"
               x="248"
               y="-351"
               width="744.5"
@@ -133,7 +136,10 @@
                 in2="BackgroundImageFix"
                 result="shape"
               />
-              <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur" />
+              <feGaussianBlur
+                stdDeviation="40"
+                result="effect1_foregroundBlur"
+              />
             </filter>
           </defs>
         </svg>
@@ -142,11 +148,11 @@
           <ScrollText class="ScrollText1" />
           <ScrollText class="ScrollText2" />
         </div>
-       <div class="Slogan">
-         我们热爱 Figma<br/>
-         和它自由开放的观念<br/>
-         那就，贡献与创造
-       </div>
+        <div class="Slogan">
+          我们热爱 Figma<br />
+          和它自由开放的观念<br />
+          那就，贡献与创造
+        </div>
       </div>
       <nav>
         <Logo class="Logo" />
@@ -248,8 +254,12 @@
               <a href="https://twitter.com/yancymin" target="_blank"
                 ><Twitter
               /></a>
-              <a href="https://github.com/yancymin" target="_blank"><Github /></a>
-              <a href="https://codepen.io/yancy/" target="_blank"><Codepen /></a>
+              <a href="https://github.com/yancymin" target="_blank"
+                ><Github
+              /></a>
+              <a href="https://codepen.io/yancy/" target="_blank"
+                ><Codepen
+              /></a>
               <a href="https://www.instagram.com/yancymin/" target="_blank"
                 ><Instagram
               /></a>
@@ -314,7 +324,10 @@
       </svg> -->
       <FooterCom />
     </div>
-    <Download :downloadClose="this.downloadShow" @close="() => this.downloadShow = 0"/>
+    <Download
+      :downloadClose="this.downloadShow"
+      @close="() => (this.downloadShow = 0)"
+    />
   </div>
 </template>
 
@@ -371,14 +384,18 @@ export default {
         des: [
           "为中文母语使用者提供便捷",
           "持续的创造，全部开源",
-          "大家都爱 Figma",
-          "为 Figma 贡献力量"
+          "拥抱更加开放的世界",
+          "欢迎加入，大家都爱 Figma"
         ],
         story: `我们从 Figma 上看到了设计工具和设计交流的未来，从一个个孤岛到更加开放的协作系统，Figma 正在改变游戏规则。
 
-Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创造。我们的创造便是 Figma.Cool。Figma.Cool 是一个致力于在国内推广 Figma 的组织，这里有 Figma 汉化补丁、众多优质设计资源、Figma 插件推荐和我们开发的提高设计效率的插件。当然，也可以加入我们的社群，一起讨论和追踪关于 Figma 的一切，我们一直都在。
+2017 年第一次接触到 Figma，现在还能清晰地记得那晚感受到的魔力和震撼。打开一个 URL 便可以启动工作，随着设计的更新，URL 保持不变，取消了以往同步设计资产所需的复杂流程，并确保团队中的每个人都在使用最新文件。一个很好的比喻是，Figma 的存在就像 GitHub 于开发者，而这两者的观念和核心都是在拥抱更加开放的世界，更大限度的发挥生产者的价值。
 
-我们非常感谢参与贡献力量的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。`
+Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡献与创造。我们的创造便是 Figma.Cool。Figma.Cool 是一个致力于在国内推广 Figma 的组织，我们完成了 Figma 的汉化工作（这里特别感谢 @Pluwen），今年 6 月 28 日上线了 Figma.Cool 资源站，持续开发了多款提高效率的 Figma 插件。
+
+现在，每天有几百人在访问着 Figma.Cool，社群里每每有带有问题的新人加入，大家都积极地相互解答和交流。你也可以随时加入我们的社群，一起讨论和追踪关于 Figma 的一切，我们一直都在。
+
+我们非常感激参与贡献力量的创作者，正是因为有如此多抱有自由开放贡献精神的大家，这个领域才能不断的进步，不断的打破规则和爆发更大的创意。2020 年的疫情给世界带来了新的思考，新的格局正在形成，边界正在被融合。`
       },
       downloadShow: 0
     }
@@ -520,7 +537,7 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
       .ScrollText1,
       .ScrollText2 {
         will-change: transform;
-        animation: scrollText 25s linear infinite;
+        animation: scrollText 30s linear infinite both;
 
         @keyframes scrollText {
           to {
@@ -537,8 +554,9 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
       font-size: 64px;
       line-height: 80px;
       font-weight: 700;
-      color: #3E4373;
-      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6),  0 -1px 1px rgba(255, 255, 255, 0.24);
+      color: #3e4373;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6),
+        0 -1px 1px rgba(255, 255, 255, 0.24);
     }
   }
   nav {
@@ -611,7 +629,7 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
   section {
     opacity: 0;
     transition: all 0.6s ease-out;
-    transform: perspective(1000px) rotateX(-5deg) translateY(0%);
+    /* transform: perspective(1000px) rotateX(-5deg) translateY(0%); */
     transform-origin: top;
     background: var(--color-black-2);
   }
@@ -766,6 +784,7 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
     width: 100vw;
     margin-top: var(--mg-1);
     margin-bottom: var(--mg-1);
+    background: none !important;
 
     .contributor {
       position: relative;
@@ -942,7 +961,7 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
 
 .logo-motion {
   will-change: transform;
-  animation: moving 30s infinite ease-out both;
+  animation: moving 40s infinite ease;
 
   &:nth-of-type(1) {
     transform-origin: left top;
@@ -979,71 +998,75 @@ Coiven 和我想成为这场变革中的一份子，能够做一些贡献与创�
 
 .section-show {
   opacity: 1 !important;
-  transform: perspective(0) rotateX(0) translateY(0%) !important;
+  /* transform: perspective(0) rotateX(0) translateY(0%) !important; */
 }
 
-.section-2 .cardWrap .left{
+.section-2 .cardWrap .left {
   ::v-deep .card {
-     &:nth-of-type(1) {
-         &:hover {
-          background: #09b5ff;
-          color: white;
+    &:nth-of-type(1) {
+      &:hover {
+        background: #09b5ff;
+        color: white;
 
-          h3, p{
+        h3,
+        p {
           color: white;
-          }
+        }
 
-          .des {
-            opacity: 1;
-          }
-         }
-     }
-     &:nth-of-type(2) {
-         &:hover {
-          background: #eba801;
+        .des {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      &:hover {
+        background: #eba801;
+        color: white;
+
+        h3,
+        p {
           color: white;
+        }
 
-          h3, p{
-          color: white;
-          }
-
-          .des {
-            opacity: 1;
-          }
-         }
-     }
+        .des {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
-.section-2 .cardWrap .right{
+.section-2 .cardWrap .right {
   ::v-deep .card {
-     &:nth-of-type(1) {
-         &:hover {
-          background: #5e5bf6;
-          color: white;
+    &:nth-of-type(1) {
+      &:hover {
+        background: #5e5bf6;
+        color: white;
 
-          h3, p{
+        h3,
+        p {
           color: white;
-          }
+        }
 
-          .des {
-            opacity: 1;
-          }
-         }
-     }
-     &:nth-of-type(2) {
-         &:hover {
-          background: #f65c8a;
+        .des {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      &:hover {
+        background: #f65c8a;
+        color: white;
+
+        h3,
+        p {
           color: white;
+        }
 
-          h3, p{
-          color: white;
-          }
-
-          .des {
-            opacity: 1;
-          }
-         }
-     }
+        .des {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 </style>

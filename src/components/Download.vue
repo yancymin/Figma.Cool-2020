@@ -8,7 +8,7 @@
       支持中文界面。
     </p>
     <div class="pics">
-      <img src="../assets/pic-1.png" alt="pic-1" />
+      <img src="../assets/pic-2.png" alt="pic-1" />
     </div>
     <div class="guide">
       <div class="switch">
@@ -343,9 +343,9 @@ export default {
           }
 
           .links {
-            position: relative;
-            bottom: -20px;
-            display: flex;
+            position: absolute;
+            bottom: 20px;
+            height: 64px;
             z-index: 9;
             width: 90%;
             padding: 0 16px;

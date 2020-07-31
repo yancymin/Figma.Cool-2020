@@ -46,6 +46,9 @@ export default {
 <style lang="scss" scoped>
 footer {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
   padding: var(--mg-1) 0;
   margin-top: var(--mg-3);
@@ -116,8 +119,8 @@ footer {
   }
 
   span {
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 </style>
