@@ -403,6 +403,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
   },
   methods: {
     scrollTo (item, fun) {
+      if (item.classList.contains('section-show')) return
       let scrollTop = 0
       if (document.documentElement && document.documentElement.scrollTop) {
         scrollTop = document.documentElement.scrollTop
@@ -441,9 +442,11 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
           const randomNum = Math.floor(Math.random() * 20)
           emojis[randomNum].classList.add("emoji-show")
         }, 300)
-        setTimeout(() => {
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
           clearInterval(emoji)
         }, 12000)
+        window.removeEventListener('scroll')
       })
     })
 

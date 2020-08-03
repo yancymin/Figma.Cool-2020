@@ -37,23 +37,36 @@ html {
 .braille {
   z-index: -1;
   position: absolute;
-  top: 820px;
+  top: 560px;
+  left: 0;
   opacity: 0.6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row;
+  width: 100vw;
   max-width: 100%;
   min-height: 1300px;
-  width: 100vw;
-  font: 11px/12px 'Iosevka Web', monospace;
-  color: var(--color-blue-2);
-  will-change: transform;
-  transform: scale3d(1.4, 1.4, 1.4);
 }
 
 .braille > * {
   white-space: pre;
+}
+
+.braille .visible {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-75%);
+  opacity: 0;
+  animation: opacityShow .3s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes opacityShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .braille .hidden {
