@@ -42,6 +42,17 @@
             </div>
           </div>
           <div class="right">
+            <div class="alert">
+                <h3>
+                    注意
+                </h3>
+                <ul>
+                    <li>首先确认客户端版本号和左方补丁下载区域的版本号一致；</li>
+                    <li>替换文件前，备份原生 app.asar 文件；</li>
+                    <li>如果遇到程序报错，请核对安装步骤是否有遗漏，无法解决请重新安装 Figma 客户端或者把备份的文件还原；</li>
+                    <li>替换完成后客户端默认英文，macOS 在左上角 Apple Logo 旁边第一项菜单中选择中文。windows 在右上角下拉箭头菜单中选择。</li>
+                </ul>
+            </div>
             <h3>macOS 安装指南</h3>
             <ul>
               <li>
@@ -307,7 +318,7 @@ export default {
     .content {
       width: 100vw;
       max-width: 1180px;
-      height: 1200px;
+      height: 1800px;
       margin: var(--mg-3) 0;
 
       .client {
@@ -331,7 +342,7 @@ export default {
           cursor: pointer;
 
           &::before {
-              content: "Figma 版本号：86.5.0";
+              content: "当前支持 Figma 版本号：86.5.0";
               position: absolute;
               bottom: -40px;
               padding: 8px;
@@ -387,6 +398,14 @@ export default {
           align-items: flex-start;
           padding-left: 10%;
 
+          .alert {
+              li {
+                  &:last-child {
+                      margin-bottom: 120px;
+                  }
+              }
+          }
+
           h3 {
             font-size: 40px;
             line-height: 40px;
@@ -394,7 +413,7 @@ export default {
             text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
             margin-bottom: 48px;
 
-            &:nth-of-type(2), &:nth-of-type(3) {
+           &:nth-of-type(2), &:nth-of-type(3) {
               margin-top: 120px;
             }
           }
@@ -436,6 +455,11 @@ export default {
             &:nth-of-type(3) {
               &::before {
                 content: "3";
+              }
+            }
+            &:nth-of-type(4) {
+              &::before {
+                content: "4";
               }
             }
 
