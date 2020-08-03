@@ -37,12 +37,13 @@ html {
 .braille {
   z-index: -1;
   position: absolute;
-  top: 560px;
+  top: 500px;
   left: 0;
   opacity: 0.6;
   width: 100vw;
   max-width: 100%;
   min-height: 1300px;
+  overflow: hidden;
 }
 
 .braille > * {
@@ -53,7 +54,7 @@ html {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-75%);
+  transform: translateX(-60%);
   opacity: 0;
   animation: opacityShow .3s forwards;
   animation-delay: 3s;

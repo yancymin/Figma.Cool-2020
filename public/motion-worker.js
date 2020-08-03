@@ -9,8 +9,8 @@ const filler = "\u28ff".repeat(fillerSize) + "\n\u28ff".repeat(fillerSize - 1);
 const root = element("div", { className: "braille" });
 const hidden = element("div", { className: "hidden", textContent: filler });
 const visible = element("canvas", { className: "visible" });
-visible.width = "2800";
-visible.height = "800";
+visible.width = "4000";
+visible.height = "1000";
 const ctx = visible.getContext("2d");
 ctx.font = "12px Iosevka Web";
 ctx.fillStyle = '#5d6398';
@@ -24,9 +24,9 @@ const fontWidth = hr.width / fillerSize;
 const fontHeight = hr.height / fillerSize;
 
 const rr = root.getBoundingClientRect();
-const ratio = 3.5;
-const width = 1400;
-const height = 400;
+const ratio = 2.5;
+const width = 1600;
+const height = 600;
 
 console.log(rr.width, fontWidth, width, height);
 
