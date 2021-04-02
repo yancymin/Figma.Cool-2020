@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <a class="plugin-link" href="https://plugin.figma.cool">
+      <div class="alert">Figma 插件分类列表→</div>
+    </a>
     <div class="area" :style="{ display: this.downloadShow ? 'none' : '' }">
       <div class="hero">
         <svg
@@ -271,7 +274,9 @@
             <p>"不务正业" 的小透明前端 🧑‍💻</p>
             <div class="links">
               <a href="https://github.com/Coiven" target="_blank"><Github /></a>
-              <a href="https://www.instagram.com/coiven.zary/" target="_blank"><Instagram/></a>
+              <a href="https://www.instagram.com/coiven.zary/" target="_blank"
+                ><Instagram
+              /></a>
             </div>
           </div>
         </div>
@@ -403,7 +408,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
   },
   methods: {
     scrollTo (item, fun) {
-      if (item.classList.contains('section-show')) return
+      if (item.classList.contains("section-show")) return
       let scrollTop = 0
       if (document.documentElement && document.documentElement.scrollTop) {
         scrollTop = document.documentElement.scrollTop
@@ -446,7 +451,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
           clearTimeout(timer)
           clearInterval(emoji)
         }, 12000)
-        window.removeEventListener('scroll')
+        window.removeEventListener("scroll")
       })
     })
 
@@ -510,6 +515,17 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
 <style lang="scss" scoped>
 .home {
   width: 100vw;
+  transform: translateY(-40px);
+  animation: showAlert 0.6s ease-out 1s forwards;
+
+  @keyframes showAlert {
+    from {
+      transform: translateY(-40px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 
   .area {
     width: 100%;
@@ -1070,6 +1086,44 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+.plugin-link {
+  width: 100vw;
+  padding: 20px;
+  background: rgb(0 0 0 / 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.alert {
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(to right, #6b6b6b 0, #fff 10%, #6b6b6b 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  padding: 6px 48px;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 220px;
+    }
+    100% {
+      background-position: 220px;
     }
   }
 }
