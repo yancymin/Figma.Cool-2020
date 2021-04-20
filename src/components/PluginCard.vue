@@ -33,28 +33,35 @@ export default {
   cursor: pointer;
   background: #3e4373;
   overflow: hidden;
+  transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &:hover {
     /* transform: scale3d(0.97, 0.97, 0.97); */
 
+    .logo {
+      transform: scale(1.2);
+    }
+
     .right {
-      transform: scale3d(0.9, 0.9, 0.9) perspective(630px) rotateY(-20deg) rotateZ(2deg);
+      transform: scale3d(1.03, 1.03, 1.03) perspective(830px) rotateY(-20deg)
+        rotateZ(2deg) translateX(-20px);
     }
   }
 
-    h3 {
-    font-family: 'Noto Sans SC', sans-serif;
+  h3 {
+    font-family: "Noto Sans SC", sans-serif;
     font-weight: 500;
   }
 
   p {
-        font-family: 'Noto Sans SC', sans-serif;
-        font-weight: 400;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 400;
   }
 
   .logo {
     margin-bottom: 32px;
     margin-left: -8px;
+    transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .title {
@@ -90,13 +97,13 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
-    .card {
-        width: 100%;
-        max-width: 100% !important;
+  .card {
+    width: 100%;
+    max-width: 100% !important;
 
-        .right {
-          display: none;
-        }
+    .right {
+      display: none;
     }
+  }
 }
 </style>
