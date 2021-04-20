@@ -174,9 +174,9 @@
         </Title>
         <div class="cardWrap">
           <Card
-            title="Figma.Cool"
+            title="UI.Figma.Cool"
             info="资源、插件推荐、教程文章"
-            des="Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的 Figma 共享平台。"
+            des="UI.Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的 Figma 共享平台。"
             imgSrc="/imgs/card-logo-1.svg"
             bgColor="background: var(--color-red-1)"
             rightSrc="/imgs/card-right-1.svg"
@@ -215,6 +215,22 @@
               rightSrc="imgs/plugin-3.png"
               href="https://www.figma.com/community/plugin/863748474013054025/Same-Text-Generator"
             />
+            <PluginCard
+              title="FrameAll"
+              info="批量添加 Frame"
+              des="一键给所选图层批量添加 Frame。"
+              imgSrc="imgs/Plugin-icon-frameall.svg"
+              rightSrc="imgs/plugin-cover-frameall.png"
+              href="https://www.figma.com/community/plugin/891195693567112423/FrameAll"
+            />
+            <PluginCard
+              title="WebCard"
+              info="网站链接卡片"
+              des="生成一个可以打开链接的网页信息卡片。"
+              imgSrc="imgs/Plugin-icon-webcard.svg"
+              rightSrc="imgs/plugin-cover-webcard.png"
+              href="https://www.figma.com/community/plugin/964923142929990075/WebCard"
+            />
           </div>
           <div class="right">
             <PluginCard
@@ -232,6 +248,14 @@
               imgSrc="imgs/Plugin-icon-4.svg"
               rightSrc="imgs/plugin-4.png"
               href="https://www.figma.com/community/plugin/862912103841000337/Unlocker"
+            />
+            <PluginCard
+              title="Plugin Store"
+              info="Figma 插件商店"
+              des="轻松地在设计稿中搜索全部 Figma 插件。"
+              imgSrc="imgs/Plugin-icon-pluginstore.svg"
+              rightSrc="imgs/plugin-cover-pluginstore.png"
+              href="https://www.figma.com/community/plugin/964142928021463219/Plugin-Store"
             />
           </div>
         </div>
@@ -1053,6 +1077,36 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
         }
       }
     }
+    &:nth-of-type(3) {
+      &:hover {
+        background: #09b5ff;
+        color: white;
+
+        h3,
+        p {
+          color: white;
+        }
+
+        .des {
+          opacity: 1;
+        }
+      }
+    }
+      &:nth-of-type(4) {
+      &:hover {
+        background: #eba801;
+        color: white;
+
+        h3,
+        p {
+          color: white;
+        }
+
+        .des {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 .section-2 .cardWrap .right {
@@ -1075,6 +1129,21 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
     &:nth-of-type(2) {
       &:hover {
         background: #f65c8a;
+        color: white;
+
+        h3,
+        p {
+          color: white;
+        }
+
+        .des {
+          opacity: 1;
+        }
+      }
+    }
+     &:nth-of-type(3) {
+      &:hover {
+        background: #5e5bf6;
         color: white;
 
         h3,

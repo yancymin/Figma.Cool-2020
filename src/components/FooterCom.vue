@@ -18,7 +18,7 @@
         <Github />
       </a>
     </div>
-    <span>Copyright © 2020 Figma.Cool.</span>
+    <span>Copyright © 2021 Figma.Cool.</span>
   </footer>
 </template>
 
