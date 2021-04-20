@@ -2,6 +2,9 @@
   <footer>
     <Logo />
     <div class="footer_links">
+      <a href="https://figma.com/@figmacool" target="_blank">
+        <Figma />
+      </a>
       <a href="">
         <Wechat />
       </a>
@@ -29,6 +32,7 @@ import Twitter from "../assets/ourstory-icon-twitter.svg"
 import Zhihu from "../assets/icon-zhihu.svg"
 import Wechat from "../assets/icon-wechat.svg"
 import Weibo from "../assets/icon-weibo.svg"
+import Figma from "../assets/icon-figma.svg"
 
 export default {
   name: "FooterCom",
@@ -38,7 +42,8 @@ export default {
     Twitter,
     Zhihu,
     Wechat,
-    Weibo
+    Weibo,
+    Figma
   }
 }
 </script>
@@ -69,7 +74,7 @@ footer {
     a {
       margin: 0 10px;
 
-      &:first-child {
+      &:nth-of-type(2) {
         position: relative;
 
         &:hover {
