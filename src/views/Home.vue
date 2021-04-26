@@ -539,7 +539,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
 <style lang="scss" scoped>
 .home {
   width: 100vw;
-  transform: translateY(-40px);
+  /* transform: translateY(-40px);
   animation: showAlert 0.6s ease-out 1s forwards;
 
   @keyframes showAlert {
@@ -549,7 +549,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
     to {
       transform: translateY(0);
     }
-  }
+  } */
 
   .area {
     width: 100%;
@@ -1092,7 +1092,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
         }
       }
     }
-      &:nth-of-type(4) {
+    &:nth-of-type(4) {
       &:hover {
         background: #eba801;
         color: white;
@@ -1141,7 +1141,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
         }
       }
     }
-     &:nth-of-type(3) {
+    &:nth-of-type(3) {
       &:hover {
         background: #5e5bf6;
         color: white;
@@ -1160,6 +1160,10 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
 }
 
 .plugin-link {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   padding: 20px;
   background: rgb(0 0 0 / 80%);
@@ -1167,6 +1171,18 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transform: translateY(-40px);
+  backdrop-filter: saturate(180%) blur(20px);
+  animation: showAlert 0.6s ease-out 1s forwards;
+
+  @keyframes showAlert {
+    from {
+      transform: translateY(-40px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 }
 .alert {
   position: absolute;
