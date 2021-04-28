@@ -234,12 +234,12 @@
           </div>
           <div class="right">
             <PluginCard
-              title="Chinese User Data Generator"
-              info="中文用户数据生成器"
-              des="随机生成用户数据，快速批量填充。"
-              imgSrc="imgs/Plugin-icon-2.svg"
-              rightSrc="imgs/plugin-2.png"
-              href="https://www.figma.com/community/plugin/864052338727969891/Chinese-User-Data-Generator"
+              title="Plugin Store"
+              info="Figma 插件商店"
+              des="轻松地在设计稿中搜索全部 Figma 插件。"
+              imgSrc="imgs/Plugin-icon-pluginstore.svg"
+              rightSrc="imgs/plugin-cover-pluginstore.png"
+              href="https://www.figma.com/community/plugin/964142928021463219/Plugin-Store"
             />
             <PluginCard
               title="Unlocker"
@@ -250,12 +250,12 @@
               href="https://www.figma.com/community/plugin/862912103841000337/Unlocker"
             />
             <PluginCard
-              title="Plugin Store"
-              info="Figma 插件商店"
-              des="轻松地在设计稿中搜索全部 Figma 插件。"
-              imgSrc="imgs/Plugin-icon-pluginstore.svg"
-              rightSrc="imgs/plugin-cover-pluginstore.png"
-              href="https://www.figma.com/community/plugin/964142928021463219/Plugin-Store"
+              title="Chinese User Data Generator"
+              info="中文用户数据生成器"
+              des="随机生成用户数据，快速批量填充。"
+              imgSrc="imgs/Plugin-icon-2.svg"
+              rightSrc="imgs/plugin-2.png"
+              href="https://www.figma.com/community/plugin/864052338727969891/Chinese-User-Data-Generator"
             />
           </div>
         </div>
