@@ -17,13 +17,13 @@
           <span
             class="tab-1"
             :class="{ tabActive: this.target1 }"
-            @click="e => tabSwitch(e)"
+            @click="(e) => tabSwitch(e)"
             >客户端汉化补丁</span
           >
           <span
             class="tab-2"
             :class="{ tabActive: this.target2 }"
-            @click="e => tabSwitch(e)"
+            @click="(e) => tabSwitch(e)"
             >Chrome 浏览器插件</span
           >
         </div>
@@ -43,15 +43,16 @@
           </div>
           <div class="right">
             <div class="alert">
-                <h3>
-                    注意
-                </h3>
-                <ul>
-                    <li>首先确认客户端版本号和左方补丁下载区域的版本号一致；</li>
-                    <li>替换文件前，备份原生 app.asar 文件；</li>
-                    <li>如果遇到程序报错，请核对安装步骤是否有遗漏，无法解决请重新安装 Figma 客户端或者把备份的文件还原；</li>
-                    <li>替换完成后客户端默认中文，顶部系统菜单栏没有进行翻译。</li>
-                </ul>
+              <h3>注意</h3>
+              <ul>
+                <li>首先确认客户端版本号和左方补丁下载区域的版本号一致；</li>
+                <li>替换文件前，备份原生 app.asar 文件；</li>
+                <li>
+                  如果遇到程序报错，请核对安装步骤是否有遗漏，无法解决请重新安装
+                  Figma 客户端或者把备份的文件还原；
+                </li>
+                <li>替换完成后客户端默认中文，顶部系统菜单栏没有进行翻译。</li>
+              </ul>
             </div>
             <h3>macOS 安装指南</h3>
             <ul>
@@ -65,16 +66,29 @@
               </li>
               <li>
                 把 app.asar 文件放入 <strong>Contents/Resources</strong>，重启
-                Figma 。
+                Figma；
+              </li>
+              <li>
+                *如遇 「Figma 已损坏，无法打开。
+                您应该将它移到废纸篓」的系统报错，打开
+                <strong>「终端」</strong>输入
+                <strong
+                  >sudo xattr -rd com.apple.quarantine
+                  /Applications/Figma.app</strong
+                > 然后输入开机密码回车。
               </li>
             </ul>
             <h3>Windows 安装指南</h3>
             <ul>
               <li>
-                找到 Figma 安装文件夹（可在开始菜单下找到 Figma，右键-更多-打开文件夹位置。进入相应文件夹后，右键 Figma 图标，选择「打开文件所在的位置」）；
+                找到 Figma 安装文件夹（可在开始菜单下找到
+                Figma，右键-更多-打开文件夹位置。进入相应文件夹后，右键 Figma
+                图标，选择「打开文件所在的位置」）；
               </li>
               <li>
-                打开 <strong>app-**.*.*</strong> 文件夹（*代表数字，选择和补丁对应的版本号） ；
+                打开
+                <strong>app-**.*.*</strong>
+                文件夹（*代表数字，选择和补丁对应的版本号） ；
               </li>
               <li>
                 把 app.asar 文件放入<strong> resources</strong>，重启 Figma 。
@@ -139,9 +153,7 @@
               <li>安装插件后会不会影响性能或者出现奇怪的 bug？</li>
               <p>不会，我们仅是做了界面的汉化，没有改动任何功能性程序。</p>
               <li>选择哪种安装方式？</li>
-              <p>
-                如果可以科学上网，推荐商店安装，方便后续自动更新。
-              </p>
+              <p>如果可以科学上网，推荐商店安装，方便后续自动更新。</p>
               <li>不想用汉化了怎么办？</li>
               <p>
                 地址栏输入 chrome://extensions
@@ -161,10 +173,7 @@
       <Windows />
       <Close />
     </div>
-    <i
-      class="close"
-      @click="() => this.handleClose()"
-    >
+    <i class="close" @click="() => this.handleClose()">
       <Close />
     </i>
   </div>
@@ -342,15 +351,15 @@ export default {
           cursor: pointer;
 
           &::before {
-              content: "当前支持 Figma 版本号：97.7";
-              position: absolute;
-              bottom: -40px;
-              padding: 8px;
-              font-size: 14px;
-              line-height: 14px;
-              font-family: 'Noto Sans SC', sans-serif;
-              font-weight: 400;
-              cursor: default;
+            content: "当前支持 Figma 版本号：98.8";
+            position: absolute;
+            bottom: -40px;
+            padding: 8px;
+            font-size: 14px;
+            line-height: 14px;
+            font-family: "Noto Sans SC", sans-serif;
+            font-weight: 400;
+            cursor: default;
           }
 
           .links {
@@ -399,11 +408,11 @@ export default {
           padding-left: 10%;
 
           .alert {
-              li {
-                  &:last-child {
-                      margin-bottom: 120px;
-                  }
+            li {
+              &:last-child {
+                margin-bottom: 120px;
               }
+            }
           }
 
           h3 {
@@ -413,7 +422,8 @@ export default {
             text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
             margin-bottom: 48px;
 
-           &:nth-of-type(2), &:nth-of-type(3) {
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
               margin-top: 120px;
             }
           }
