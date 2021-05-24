@@ -196,6 +196,7 @@ export default {
     CNLogo,
     Icon1,
     Arrow,
+    // FooterCom,
     Windows,
     Apple,
     Close
