@@ -351,7 +351,7 @@ export default {
           cursor: pointer;
 
           &::before {
-            content: "当前支持 Figma 版本号：98.13";
+            content: "当前支持 Figma 版本号：99.0";
             position: absolute;
             bottom: -40px;
             padding: 8px;
