@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <a class="plugin-link" href="https://plugin.figma.cool">
-      <div class="alert">Figma 插件分类列表→</div>
+    <a class="plugin-link" href="https://love.figma.cool">
+      <div class="alert">Figma.Cool 赞助计划→</div>
     </a>
     <div class="area" :style="{ display: this.downloadShow ? 'none' : '' }">
       <div class="hero">
@@ -1166,7 +1166,13 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
   left: 0;
   width: 100vw;
   padding: 20px;
-  background: rgb(0 0 0 / 80%);
+  background: linear-gradient(
+    92.84deg,
+    #605cf7 0%,
+    #f15c8d 36.46%,
+    #eba800 81.69%,
+    #01b5ff 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1187,7 +1193,12 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
 .alert {
   position: absolute;
   color: #fff;
-  background: linear-gradient(to right, #6b6b6b 0, #fff 10%, #6b6b6b 20%);
+  background: linear-gradient(
+    to right,
+    rgb(255 255 255 / 74%) 0,
+    rgb(255 255 255) 10%,
+    rgb(255 255 255 / 74%) 20%
+  );
   background-position: 0;
   -webkit-background-clip: text;
   padding: 6px 48px;
