@@ -158,6 +158,7 @@
         </div>
       </div>
       <nav>
+        <video src="hero-bg.mp4" loop autoplay></video>
         <Logo class="Logo" />
         <div class="links">
           <a
@@ -174,13 +175,13 @@
         </Title>
         <div class="cardWrap">
           <Card
-            title="UI.Figma.Cool"
-            info="资源、插件推荐、教程文章"
-            des="UI.Figma.Cool 是一个有着众多高质量 Figma 资源、插件和教程文章的 Figma 共享平台。"
-            imgSrc="/imgs/card-logo-1.svg"
+            title="Plugin.Figma.Cool"
+            info="Figma 插件库"
+            des="集合上千 Figma 全部插件，标柱中文简介。"
+            imgSrc="/imgs/Plugin-icon-pluginstore-2.svg"
             bgColor="background: var(--color-red-1)"
             rightSrc="/imgs/card-right-1.svg"
-            href="https://ui.figma.cool"
+            href="https://plugin.figma.cool"
           />
           <Card
             title="FigmaCN"
@@ -551,6 +552,14 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
     }
   } */
 
+  video {
+    position: absolute;
+    width: 100vw;
+    max-width: 1920px;
+    bottom: -20px;
+    z-index: -1;
+  }
+
   .area {
     width: 100%;
     overflow-x: hidden;
@@ -598,7 +607,7 @@ Coiven 和我想成为这场变革中的一份子，力所能及地做一些贡�
       font-size: 64px;
       line-height: 80px;
       font-weight: 700;
-      color: #3e4373;
+      color: var(--color-blue-2);
       text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6),
         0 -1px 1px rgba(255, 255, 255, 0.24);
     }
